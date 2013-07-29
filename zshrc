@@ -69,4 +69,4 @@ alias tmux="TERM=screen-256color-bce tmux"
 set -g default-terminal "urxvt"
 
 
-source ~/.fresh/build/shell.sh
+#source ~/.fresh/build/shell.sh
