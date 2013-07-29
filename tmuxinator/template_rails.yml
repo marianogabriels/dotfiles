@@ -1,0 +1,15 @@
+# ~/.tmuxinator/sample_app.yml
+# you can make as many tabs as you wish...
+
+project_name: template
+project_root: ~/projects/template
+socket_name: # use default socket
+rvm: 2.0.0@rails3.2
+pre: #sudo /etc/rc.d/mysqld start
+tabs:
+  - editor: vim
+  - guard: guard  
+  - server: rails s
+  - console: rails c
+  - database: rails db
+  - logs: tail -f log/development.log

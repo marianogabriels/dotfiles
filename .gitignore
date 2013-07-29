@@ -3,3 +3,5 @@
 *~
 .*.swp
 !.gitignore
+/tmuxinator/*
+!/tmuxinator/template_rails.yml
