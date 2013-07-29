@@ -1,9 +1,21 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible " improved
 
-set nocompatible
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'shougo/vimproc'
+
+"----------------------------------------------
+"---------------Vundle old files---------------
+" ---------------------------------------------
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 "256 color bash
-
+"Bundle 'gmarik/vundle'
 
 syntax on
 syntax enable
@@ -20,31 +32,30 @@ if &term =~ '256color'
 endif
 
 
-Bundle 'Shougo/vimproc.vim'
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'mattn/zencoding-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'scrooloose/syntastic'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-ruby/vim-ruby'
-Bundle "tomtom/tlib_vim"
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neocomplete'
-Bundle 'garbas/vim-snipmate'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'rking/ag.vim'
-Bundle 'Shougo/unite.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'honza/vim-snippets'
-Bundle 'tpope/vim-surround'
-Bundle 'Yggdroot/indentLine'
-Bundle 'jimsei/winresizer'
-Bundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle "tomtom/tlib_vim"
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'jimsei/winresizer'
+NeoBundle 'christoomey/vim-tmux-navigator'
 " move between splits tmux = vim
 "Bundle 'majutsushi/tagbar'
 "Bundle 'nathanaelkane/vim-indent-guides'
@@ -53,11 +64,11 @@ Bundle 'christoomey/vim-tmux-navigator'
 
 
 "colorschemes
-Bundle 'joedicastro/vim-molokai256'
-Bundle 'sjl/badwolf'
-Bundle 'tomasr/molokai'
-Bundle 'jpo/vim-railscasts-theme'
-Bundle 'zaiste/Atom'
+NeoBundle 'joedicastro/vim-molokai256'
+NeoBundle 'sjl/badwolf'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'zaiste/Atom'
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
@@ -332,3 +343,5 @@ endif
 au BufRead,BufNewFile *.less setfiletype css
 
 "map <Leader>a :Tab / = /l0<CR>:Tab / :/l0<CR>
+
+NeoBundleCheck
