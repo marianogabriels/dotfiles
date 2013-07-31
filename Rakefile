@@ -2,6 +2,7 @@ desc "install all dotfiles in home directory aggresive script"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
+  install_neobundle
   replace_all = true
   files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh]
   #files "oh-my-zsh/custom/"
@@ -53,6 +54,7 @@ def link_file(file)
   end
 end
 
+
 def switch_to_zsh
   if ENV["SHELL"] =~ /zsh/
     puts "using zsh"
@@ -70,7 +72,22 @@ def switch_to_zsh
   end
 end
 
-
+def install_neobundle
+  if File.exist?(File.join(ENV['HOME'], ".vim/bundle/neobundle.vim"))
+    puts "found ~/.vim/bundle/neobundle.vim"
+  else
+    print "install neobundle (vim plugin)? [ynq] "
+    case $stdin.gets.chomp
+    when 'y'
+      puts "installing neobundle"
+      system %Q{git clone https://github.com/Shougo/neobundle.vim "$HOME/.vim/bundle/neobundle.vim"}
+      when 'q'
+        exit
+      else
+      puts "Skipping neobundle install, vim not work correctly"
+    end
+  end
+end
 
 def install_oh_my_zsh
   if File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
