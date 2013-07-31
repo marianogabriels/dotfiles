@@ -57,10 +57,10 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'jimsei/winresizer'
 NeoBundle 'christoomey/vim-tmux-navigator'
 " move between splits tmux = vim
-"Bundle 'majutsushi/tagbar'
-"Bundle 'nathanaelkane/vim-indent-guides'
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'SirVer/ultisnips'
+"NeoBundle 'majutsushi/tagbar'
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'SirVer/ultisnips'
 
 
 "colorschemes
@@ -72,6 +72,7 @@ NeoBundle 'zaiste/Atom'
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
+
 "let g:badwolf_darkgutter = 1
 
 "let g:solarized_termcolors=256
