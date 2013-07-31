@@ -63,7 +63,8 @@ def switch_to_zsh
     case $stdin.gets.chomp
     when 'y'
       puts "switching to zsh"
-      system %Q{chsh -s `which zsh`}
+      #works for archlinux
+      system %Q{ chsh -s /usr/bin/zsh }
     when 'q'
       exit
     else
