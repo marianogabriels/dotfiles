@@ -20,7 +20,7 @@ ZSH_THEME="robbyrussell"
 alias vimrc="vim ~/.vimrc"
 alias zrc="vim ~/.zshrc"
 alias xconf="vim ~/.Xresources && xrdb ~/.Xresources"
-alias cleant="rm -r -f ~/.tmp/* && rm -r -f ~/.tmp/.*"
+alias cleant="rm -r -f ~/.tmp/* && sudo rm -r -f /var/tmp/*.*"
 alias agile="~/projects/agilerails/ecommerce_sample"
 
 
@@ -54,7 +54,7 @@ alias agile="~/projects/agilerails/ecommerce_sample"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmux tmuxinator)
+plugins=(git tmux tmuxinator rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,3 +71,5 @@ set -g default-terminal "urxvt"
 
 #source ~/.fresh/build/shell.sh
 source ~/.aliasrc
+export EDITOR='vim'
+if [ "$TMUX" = "" ]; then tmux; fi
