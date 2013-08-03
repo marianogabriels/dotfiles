@@ -70,6 +70,6 @@ set -g default-terminal "urxvt"
 
 
 #source ~/.fresh/build/shell.sh
-source ~/.aliasrc
+#source ~/.aliasrc
 export EDITOR='vim'
 #if [ "$TMUX" = "" ]; then tmux; fi
