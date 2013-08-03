@@ -6,9 +6,8 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'shougo/vimproc'
 
+NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------
 "---------------Vundle old files---------------
 " ---------------------------------------------
@@ -21,15 +20,23 @@ syntax on
 syntax enable
 
 set background=light
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 set t_Co=256
 
 set cursorline
 
 "fix erase background color problem!!!
-if &term =~ '256color'
-    set t_ut=
-endif
+"if &term =~ '256color'
+"    set t_ut=
+    "endif
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
 
 NeoBundle 'Shougo/vimproc.vim'
@@ -56,6 +63,9 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'jimsei/winresizer'
 NeoBundle 'christoomey/vim-tmux-navigator'
+
+
+
 " move between splits tmux = vim
 "NeoBundle 'majutsushi/tagbar'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
