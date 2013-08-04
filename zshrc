@@ -54,7 +54,7 @@ alias agile="~/projects/agilerails/ecommerce_sample"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmux tmuxinator rvm)
+plugins=(git tmux tmuxinator rvm bundler archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,7 +63,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 ZSH_TMUX_AUTOSTART=true
-DISABLE_AUTO_TITLE=true
+export DISABLE_AUTO_TITLE=true
 export TERM="xterm-256color"
 alias tmux="TERM=screen-256color-bce tmux"
 set -g default-terminal "urxvt"
