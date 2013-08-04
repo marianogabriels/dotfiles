@@ -73,3 +73,7 @@ set -g default-terminal "urxvt"
 #source ~/.aliasrc
 export EDITOR='vim'
 #if [ "$TMUX" = "" ]; then tmux; fi
+
+
+# ::RVM:: 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
