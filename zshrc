@@ -59,7 +59,7 @@ plugins=(git tmux tmuxinator rvm)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/home/marianogabriels/.rvm/gems/ruby-2.0.0-p247/bin:/home/marianogabriels/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/marianogabriels/.rvm/rubies/ruby-2.0.0-p247/bin:/home/marianogabriels/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
+#export PATH=$PATH:/home/marianogabriels/.rvm/gems/ruby-2.0.0-p247/bin:/home/marianogabriels/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/marianogabriels/.rvm/rubies/ruby-2.0.0-p247/bin:/home/marianogabriels/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
 
 
 ZSH_TMUX_AUTOSTART=true
