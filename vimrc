@@ -169,6 +169,9 @@ autocmd FileType ruby map <F9> :w<CR>:!clear && ruby -c %<CR>
 " Ruby run
 autocmd FileType ruby map <F8> :w<CR>:!clear && ruby -w  %<CR>
 
+" Perl run
+autocmd FileType perl map <F8> :w<CR>:!clear && perl %<CR>
+
 
 "Custom EASY split navigation
 nnoremap <C-h> <C-w>h
@@ -230,6 +233,7 @@ endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
