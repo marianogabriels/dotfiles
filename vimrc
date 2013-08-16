@@ -1,11 +1,14 @@
 set nocompatible " improved
-
+set encoding=utf-8
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
+filetype on
+filetype plugin on
+filetype indent on
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------
@@ -44,7 +47,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'mattn/gist-vim'
+"NeoBundle 'mattn/gist-vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -153,7 +156,7 @@ let g:gitgutter_highlight_lines = 0
 
 set nocompatible
 
-filetype plugin on
+"filetype plugin on
 filetype plugin indent on
 "filetype indent on
 "let g:clipbrdDefaultReg = '+'
