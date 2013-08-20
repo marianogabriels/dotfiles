@@ -1,2 +1,2 @@
-exec mate-session
+exec i3
 xrdb ~/.Xresources

@@ -10,6 +10,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
+
 NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------
 "---------------Vundle old files---------------
@@ -82,11 +83,11 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'zaiste/Atom'
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
+colorscheme badwolf
+"let g:molokai_original = 1
+"let g:rehash256 = 1
 
-"let g:badwolf_darkgutter = 1
+let g:badwolf_darkgutter = 1
 
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=0
