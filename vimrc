@@ -69,7 +69,6 @@ NeoBundle 'jimsei/winresizer'
 NeoBundle 'christoomey/vim-tmux-navigator'
 
 
-
 " move between splits tmux = vim
 "NeoBundle 'majutsushi/tagbar'
 "NeoBundle 'nathanaelkane/vim-indent-guides'

@@ -1,2 +1,2 @@
-exec i3
+exec i3 
 xrdb ~/.Xresources
