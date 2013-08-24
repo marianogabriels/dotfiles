@@ -56,13 +56,13 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle "tomtom/tlib_vim"
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neocomplete'
-NeoBundle 'garbas/vim-snipmate'
+"NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'honza/vim-snippets'
+"NeoBundle 'honza/vim-snippets'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'jimsei/winresizer'
@@ -74,6 +74,11 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'Valloric/YouCompleteMe'
 "NeoBundle 'SirVer/ultisnips'
+"
+
+
+"snippets
+let g:neosnippet#snippets_directory='~/.snippets'
 
 
 "colorschemes
@@ -157,7 +162,6 @@ let g:gitgutter_highlight_lines = 0
 set nocompatible
 
 "filetype plugin on
-filetype plugin indent on
 "filetype indent on
 "let g:clipbrdDefaultReg = '+'
 
@@ -174,6 +178,10 @@ autocmd FileType ruby map <F8> :w<CR>:!clear && ruby -w  %<CR>
 
 " Perl run
 autocmd FileType perl map <F8> :w<CR>:!clear && perl %<CR>
+
+" firefox 
+autocmd FileType html map <F8> :w<CR>:!clear && chromium %<CR>
+
 
 
 "Custom EASY split navigation
@@ -248,7 +256,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 
 "Ruby
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+autocmd FileType ruby,haml,html,eruby,yaml,javascript,sass,cucumber set ai sw=2 sts=2 et
 
 
 

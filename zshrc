@@ -54,7 +54,7 @@ alias agile="~/projects/agilerails/ecommerce_sample"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmux tmuxinator rvm bundler archlinux)
+plugins=(git tmux tmuxinator rvm bundler archlinux perl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -77,3 +77,5 @@ export EDITOR='vim'
 
 # ::RVM:: 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+source ~/perl5/perlbrew/etc/bashrc
