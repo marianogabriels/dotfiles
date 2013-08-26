@@ -75,3 +75,9 @@ snippet eval
 		${2:#:handle failure...}
 	}
 
+#custom snippets#
+
+snippet foreach
+    foreach my $${1:element} (@${2:elements}) {
+        ${0}
+    }

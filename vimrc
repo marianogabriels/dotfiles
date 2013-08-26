@@ -67,6 +67,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'jimsei/winresizer'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'scrooloose/nerdcommenter'
 
 
 " move between splits tmux = vim
@@ -161,15 +162,15 @@ let g:gitgutter_highlight_lines = 0
 
 set nocompatible
 
-"filetype plugin on
-"filetype indent on
 "let g:clipbrdDefaultReg = '+'
 
 "gist xclip command
 let g:gist_clip_command = 'xclip -selection clipboard'
 
 
-"ruby run without warnings
+
+"========================= Start of runners =========================
+"ruby run without warnings                  
 "autocmd FileType ruby map <F5> :w<CR>:!clear && ruby %<CR>
 " Custom syntax checked
 autocmd FileType ruby map <F9> :w<CR>:!clear && ruby -c %<CR>
@@ -181,6 +182,11 @@ autocmd FileType perl map <F8> :w<CR>:!clear && perl %<CR>
 
 " firefox 
 autocmd FileType html map <F8> :w<CR>:!clear && chromium %<CR>
+
+"javascript run juejuejue
+autocmd FileType javascript map <F8> :w<CR>:!clear && node %<CR>
+"==========================+END of runners===========================
+
 
 
 

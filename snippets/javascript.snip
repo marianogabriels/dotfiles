@@ -29,6 +29,10 @@ snippet f
 options word
   function(${1}) { ${0:TARGET} };
 
+snippet log
+options word
+  console.log("${0:TARGET}");
+
 snippet if
 options head
   if (${1:true}) {
@@ -54,6 +58,18 @@ options head
   for (var ${1:i} in ${2:#:Things}) {
     ${0:TARGET}
   }
+
+snippet while
+options head
+  while (${1:i}){
+    ${0:TARGET}
+  }
+
+snippet dowhile
+options head
+    do {
+        ${0:TARGET}
+    }while(${1:condicion});
 
 snippet key-value
 abbr :,
