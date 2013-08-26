@@ -35,8 +35,14 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 
+font pango:DejaVu Sans Mono 00
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+
+#custom
+bindsym $mod+F1 exec chromium
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -190,8 +196,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	mode dock
-	position top
+	position bottom
 	workspace_buttons yes
+    font pango:DejaVu Sans Mono 12
    	status_command i3status
    	tray_output none
 	colors {
