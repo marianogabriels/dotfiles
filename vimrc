@@ -10,7 +10,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-
 NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------
 "---------------Vundle old files---------------
@@ -52,7 +51,6 @@ NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle "tomtom/tlib_vim"
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neocomplete'
@@ -64,22 +62,25 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'godlygeek/tabular'
 "NeoBundle 'honza/vim-snippets'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'jimsei/winresizer'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'scrooloose/nerdcommenter'
-
-
-" move between splits tmux = vim
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'pangloss/vim-javascript'
 "NeoBundle 'majutsushi/tagbar'
-"NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'Valloric/YouCompleteMe'
 "NeoBundle 'SirVer/ultisnips'
 "
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"NeoBundle 'vim-scripts/indenthtml.vim'
 
 
 "snippets
 let g:neosnippet#snippets_directory='~/.snippets'
+
+"tagbar
+nmap <F6> :TagbarToggle<CR>
 
 
 "colorschemes
@@ -214,7 +215,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set autoindent
+"set autoindent
 set laststatus=2
 set showmatch
 set incsearch

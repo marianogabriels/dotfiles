@@ -35,7 +35,12 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 
-font pango:DejaVu Sans Mono 00
+#Custom windows borders
+#for_window [title=" - Chromium$"] border 1pixel
+for_window [title="urxvt$"] border 1pixel
+
+
+font pango:DejaVu Sans Mono 09
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -43,7 +48,7 @@ floating_modifier $mod
 
 #custom
 bindsym $mod+F1 exec chromium
-
+bindsym $mod+m exec urxvt -e alsamixer
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -83,10 +88,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-#bindsym $mod+h split h
+bindsym $mod+v split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+#bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
