@@ -1,6 +1,7 @@
 # AUTOSTART##############
 
 exec xrdb ~/.Xresources
+exec --no-startup-id nitrogen --restore
 
 for_window [title="Conky"] floating enable  border 3 pixel  floating_maximum_size 500 X 500 
 assign [class="Conky"] "6 : Sys-Mon"
