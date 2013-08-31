@@ -41,7 +41,6 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
-
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
