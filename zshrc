@@ -22,6 +22,7 @@ alias zrc="vim ~/.zshrc"
 alias xconf="vim ~/.Xresources && xrdb ~/.Xresources"
 alias cleant="rm -r -f ~/.tmp/* && sudo rm -r -f /var/tmp/*.*"
 alias agile="~/projects/agilerails/ecommerce_sample"
+alias perldoc="perldoc -u -f"
 
 
 # Set to this to use case-sensitive completion
@@ -79,3 +80,6 @@ export EDITOR='vim'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 source ~/perl5/perlbrew/etc/bashrc
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
