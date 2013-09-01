@@ -404,9 +404,10 @@ endif
 "let g:unite_source_history_yank_enable = 1
 "nnoremap <space>y :Unite history/yank<cr>
 
-
+"custom syntax
+" .md files with markdown syntax
+au BufRead,BufNewFile *.md set filetype=markdown
 "less syntax highlight
-
 au BufRead,BufNewFile *.less setfiletype css
 
 "map <Leader>a :Tab / = /l0<CR>:Tab / :/l0<CR>
