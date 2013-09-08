@@ -1,11 +1,11 @@
-# AUTOSTART##############
+#Auto Arranque#
 
 exec xrdb ~/.Xresources
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id dropbox start
 
 for_window [title="Conky"] floating enable  border 3 pixel  floating_maximum_size 500 X 500 
 assign [class="Conky"] "6 : Sys-Mon"
-
 
 #exec conky -qc /media/N-Space/home/joe/Conky/Conky.conf/conky_3_.conf  
 #exec conky -qc /media/N-Space/home/joe/Conky/Conky.conf/conky_4_.conf 

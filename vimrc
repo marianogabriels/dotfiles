@@ -10,9 +10,19 @@ filetype on
 filetype plugin on
 filetype indent on
 NeoBundleFetch 'Shougo/neobundle.vim'
+nnoremap <C-y> "+y
+vnoremap <C-y> "+y
+nnoremap <C-p> "+gP
+vnoremap <C-p> "+gP
+"vmap <C-c> "+yi
+"vmap <C-x> "+c
+"vmap <C-v> c<ESC>"+p
+"imap <C-v> <ESC>"+pa
+
 "----------------------------------------------
 "---------------Vundle old files---------------
 " ---------------------------------------------
+
 "set rtp+=~/.vim/bundle/vundle/
 "call vundle#rc()
 "256 color bash
@@ -190,8 +200,6 @@ autocmd FileType javascript map <F8> :w<CR>:!clear && node %<CR>
 "==========================+END of runners===========================
 
 
-
-
 "Custom EASY split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -203,13 +211,12 @@ nnoremap <C-l> <C-w>l
 """"""""""""""""""""""
 "      BASIC SETS    "
 """"""""""""""""""""""
-set clipboard=unnamedplus
+set clipboard=unnamed
 set ignorecase                  " set case insensitivity
 set mouse=a                     " try to use a mouse in the console (wimp!)
 set number
 " :Searching
 set incsearch                 " incremental search
-set ignorecase                " search ignoring case
 set hlsearch                  " highlight the search
 set showmatch                 " show matching bracket
 set expandtab
