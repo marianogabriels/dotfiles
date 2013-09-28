@@ -77,6 +77,8 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'othree/html5.vim'
+
 "NeoBundle 'majutsushi/tagbar'
 "NeoBundle 'Valloric/YouCompleteMe'
 "NeoBundle 'SirVer/ultisnips'
@@ -104,7 +106,7 @@ colorscheme badwolf
 "let g:rehash256 = 1
 
 
-let g:badwolf_darkgutter = 1
+"let g:badwolf_darkgutter = 1
 
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=0
@@ -185,6 +187,10 @@ set nocompatible
 "ruby run without warnings                  
 "autocmd FileType ruby map <F5> :w<CR>:!clear && ruby %<CR>
 " Custom syntax checked
+
+autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
+
+
 autocmd FileType ruby map <F9> :w<CR>:!clear && ruby -c %<CR>
 " Ruby run
 autocmd FileType ruby map <F8> :w<CR>:!clear && ruby -w  %<CR>
