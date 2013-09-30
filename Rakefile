@@ -34,6 +34,13 @@ task :install do
   end
 end
 
+desc "install require packages"
+task :packages do
+  packages = %w[ack-grep git nodejs ]
+  packages.each { |p| system("sudo apt-get install #{p}") }
+end
+
+
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub(/\.erb$/, '')}"}
   link_file(file)

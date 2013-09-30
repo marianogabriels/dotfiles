@@ -73,12 +73,14 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'jimsei/winresizer'
 NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/html5.vim'
+NeoBundle '/mileszs/ack.vim'
 
+
+let g:ackprg = 'ag --nogroup --column'
 "NeoBundle 'majutsushi/tagbar'
 "NeoBundle 'Valloric/YouCompleteMe'
 "NeoBundle 'SirVer/ultisnips'
@@ -425,4 +427,27 @@ au BufRead,BufNewFile *.less setfiletype css
 
 "map <Leader>a :Tab / = /l0<CR>:Tab / :/l0<CR>
 
+
+
+
+
+command! -nargs=0 -bar Qargs execute 'args ' . QuickfixFilenames()
+function! QuickfixFilenames()
+    " Building a hash ensures we get each buffer only once
+    let buffer_numbers = {}
+    for quickfix_item in getqflist()
+        let buffer_numbers[quickfix_item['bufnr']] =
+        bufname(quickfix_item['bufnr'])
+    endfor
+    return join(values(buffer_numbers))
+endfunction
+
+
+
+
 NeoBundleCheck
+
+
+
+
+
