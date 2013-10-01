@@ -65,7 +65,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neocomplete'
 "NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'rking/ag.vim'
+"NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'godlygeek/tabular'
@@ -77,10 +77,10 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/html5.vim'
-NeoBundle '/mileszs/ack.vim'
+NeoBundle 'mileszs/ack.vim'
 
 
-let g:ackprg = 'ag --nogroup --column'
+"let g:ackprg = 'ag --nogroup --column'
 "NeoBundle 'majutsushi/tagbar'
 "NeoBundle 'Valloric/YouCompleteMe'
 "NeoBundle 'SirVer/ultisnips'
@@ -159,7 +159,7 @@ let g:indentLine_color_term = 239
 
 
 
-autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+"autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 
 
 "git g:gitgutter fix tabs performance
@@ -190,7 +190,7 @@ set nocompatible
 "autocmd FileType ruby map <F5> :w<CR>:!clear && ruby %<CR>
 " Custom syntax checked
 
-autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
+"autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
 
 
 autocmd FileType ruby map <F9> :w<CR>:!clear && ruby -c %<CR>
@@ -269,7 +269,7 @@ endfunction
 
 
 "Ruby
-autocmd FileType ruby,haml,html,eruby,yaml,javascript,sass,cucumber set ai sw=2 sts=2 et
+autocmd FileType ruby,haml,html,eruby,yaml,javascript,sass,cucumber set sw=2 sts=2
 
 
 
@@ -406,7 +406,10 @@ map <S-h> :tabp<CR>
 
 
 "Unite search ag grep
-nnoremap <space>/ :Unite grep:.<cr>
+"nnoremap <space>/ :Unite grep:.<cr>
+"
+"Ack search 
+nnoremap <space>/ :Ack <cr>
 
 if executable('ag')
     let g:unite_source_grep_command='ag'
@@ -443,7 +446,23 @@ function! QuickfixFilenames()
 endfunction
 
 
+function!   QuickFixOpenAll()
+    if empty(getqflist())
+        return
+    endif
+    let s:prev_val = ""
+    for d in getqflist()
+        let s:curr_val = bufname(d.bufnr)
+        if (s:curr_val != s:prev_val)
+            exec "edit " . s:curr_val
+        endif
+        let s:prev_val = s:curr_val
+    endfor
+endfunction
 
+
+
+"autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
 
 NeoBundleCheck
 
