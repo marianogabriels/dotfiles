@@ -1,15 +1,15 @@
-URxvt.buffered: true
-!URxvt.font:     xft:Terminus:pixelsize=12;antialias=true
-URxvt.boldFont: xft:Terminus:bold:pixelsize=12:antialias=true
-URxvt*font: xft:Monospace:pixelsize=12:antialias=true
+Rxvt.buffered: true
+!Rxvt.font:     xft:Terminus:pixelsize=12;antialias=true
+Rxvt.boldFont: xft:Terminus:bold:pixelsize=16:antialias=true
+Rxvt*font: xft:Monospace:pixelsize=16:antialias=true
 
-!URxvt*font: xft:Monospace:pixelsize=8
+Urxvt*font: xft:Monospace:pixelsize=11:antialias=true
 
-URxvt*scrollBar: False
-URxvt*scrollTtyOutput: False
-URxvt*scrollTtyKeypress: True
-URxvt*secondaryScroll: True
-URxvt*saveLines: 8000
+Rxvt*scrollBar: False
+Rxvt*scrollTtyOutput: False
+Rxvt*scrollTtyKeypress: True
+Rxvt*secondaryScroll: True
+Rxvt*saveLines: 8000
 
 
 

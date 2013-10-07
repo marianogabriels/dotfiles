@@ -56,7 +56,7 @@ alias mycheatsheet="cd ~/Dropbox/web_/mycheatsheets"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmux tmuxinator rvm bundler archlinux perl)
+plugins=(git tmuxinator rvm bundler archlinux perl)
 
 source $ZSH/oh-my-zsh.sh
 
