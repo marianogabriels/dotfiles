@@ -1,7 +1,7 @@
 #Auto Arranque#
 
 exec xrdb ~/.Xresources
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
 exec --no-startup-id dropbox start
 
 #exec --no-startup-id gnome-session
