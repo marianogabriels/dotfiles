@@ -26,6 +26,7 @@ alias perldoc="perldoc -u -f"
 alias mycheatsheet="cd ~/Dropbox/web_/mycheatsheets"
 alias rv=".ruby-version"
 alias rg=".ruby-gemset"
+alias p="xclip -o | bash"
 
 
 # Set to this to use case-sensitive completion
