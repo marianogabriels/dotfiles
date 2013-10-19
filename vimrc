@@ -465,8 +465,3 @@ endfunction
 "autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
 
 NeoBundleCheck
-
-
-
-
-
