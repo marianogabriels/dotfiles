@@ -211,14 +211,16 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	mode dock
-	position bottom
+	position top
+	#position button
 	workspace_buttons yes
-    font pango:DejaVu Sans Mono 12
+    font pango:Inconsolata Sans Mono 12
    	status_command i3status
    	tray_output none
 	colors {
 		background #222222
-   		statusline #605c5a
+   		#statusline 605c5a 
+   		statusline EE3B3B
 		# item				 border	  bg	  fg
   		focused_workspace	#101010 #101010 #EE3B3B
    		active_workspace	#3300FF #101010 #101010
