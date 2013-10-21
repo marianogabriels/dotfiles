@@ -40,10 +40,10 @@ task :packages do
   packages.each { |p| system("sudo apt-get install #{p}") }
 end
 
-def install_go(options={})
-  #system %Q{ sudo apt-get install golang}\
-  go get -u github.com/nsf/gocode 
-end
+#def install_go(options={})
+#  #system %Q{ sudo apt-get install golang}\
+#  go get -u github.com/nsf/gocode 
+#end
 
 
 def replace_file(file)

@@ -33,14 +33,15 @@ syntax enable
 
 set background=light
 "let g:solarized_termcolors=256
-set t_Co=256
+"set t_Co=256
 
 set cursorline
 
 "fix erase background color problem!!!
 "if &term =~ '256color'
-"    set t_ut=
-    "endif
+"    elsif
+"    colorscheme molokai
+"    endif
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
@@ -102,9 +103,10 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'zaiste/Atom'
-colorscheme badwolf
+"colorscheme badwolf
+colorscheme molokai
 
-"let g:molokai_original = 1
+let g:molokai_original = 1
 "let g:rehash256 = 1
 
 
@@ -141,7 +143,7 @@ let g:tabular_loaded = 1
 let g:indentLine_char= '┆'
 let g:indentLine_enabled = 1
 let g:indentLine_filetype = []
-let g:indentLine_color_term = 239
+"let g:indentLine_color_term = 239
 
 "---------------------------------------------------
 "let g:indent_guides_guide_size = 1
