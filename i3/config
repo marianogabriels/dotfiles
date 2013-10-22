@@ -1,14 +1,17 @@
 #Auto Arranque#
 
 exec xrdb ~/.Xresources
-#exec --no-startup-id nitrogen --restore
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id dropbox start
 
 #exec --no-startup-id gnome-session
 
-for_window [title="Conky"] floating enable  border 3 pixel  floating_maximum_size 500 X 500 
-assign [class="Conky"] "6 : Sys-Mon"
+#for_window [title="Conky"] floating enable  border 3 pixel  floating_maximum_size 500 X 500 
+#assign [class="Conky"] "6 : Sys-Mon"
 
+#fn keys
+bindsym Mod4+F2 exec /usr/bin/xbacklight -dec 10
+bindsym Mod4+F3 exec /usr/bin/xbacklight -inc 10
 #exec conky -qc /media/N-Space/home/joe/Conky/Conky.conf/conky_3_.conf  
 #exec conky -qc /media/N-Space/home/joe/Conky/Conky.conf/conky_4_.conf 
 #exec conky -qc /media/N-Space/home/joe/Conky/Conky.conf/conky_1_.conf

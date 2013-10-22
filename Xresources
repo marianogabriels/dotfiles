@@ -1,9 +1,10 @@
 Rxvt.buffered: true
 !Rxvt.font:     xft:Terminus:pixelsize=12;antialias=true
-Rxvt.boldFont: xft:Terminus:bold:pixelsize=16:antialias=true
-Rxvt*font: xft:Monospace:pixelsize=16:antialias=true
+Rxvt.boldFont: xft:Inconsolata:bold:pixelsize=20:antialias=true
+Rxvt*font: xft:Inconsolata:pixelsize=20:antialias=true
 
-Urxvt*font: xft:Monospace:pixelsize=11:antialias=true
+Urxvt*font: xft:DejaVuSansMono:pixelsize=18:antialias=true
+URxvt.boldFont: xft:DejaVuSansMono:bold:pixelsize=18:antialias=true
 
 Rxvt*scrollBar: False
 Rxvt*scrollTtyOutput: False
