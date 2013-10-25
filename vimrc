@@ -427,6 +427,7 @@ endif
 "custom syntax
 " .md files with markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.thor set filetype=ruby
 "less syntax highlight
 au BufRead,BufNewFile *.less setfiletype css
 
