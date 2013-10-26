@@ -27,6 +27,7 @@ alias mycheatsheet="cd ~/Dropbox/web_/mycheatsheets"
 alias rv=".ruby-version"
 alias rg=".ruby-gemset"
 alias p="xclip -o | bash"
+alias w="sudo wifi-menu"
 
 
 # Set to this to use case-sensitive completion
@@ -59,7 +60,7 @@ alias p="xclip -o | bash"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmuxinator rvm bundler archlinux perl)
+plugins=(git tmuxinator rvm bundler archlinux perl thor knife)
 
 source $ZSH/oh-my-zsh.sh
 
