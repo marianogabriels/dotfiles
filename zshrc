@@ -28,6 +28,7 @@ alias rv=".ruby-version"
 alias rg=".ruby-gemset"
 alias p="xclip -o | bash"
 alias w="sudo wifi-menu"
+alias rgl="rvm gemset list"
 
 
 # Set to this to use case-sensitive completion
@@ -60,7 +61,7 @@ alias w="sudo wifi-menu"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmuxinator rvm bundler archlinux perl thor knife)
+plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node)
 
 source $ZSH/oh-my-zsh.sh
 
