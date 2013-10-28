@@ -29,6 +29,7 @@ alias rg=".ruby-gemset"
 alias p="xclip -o | bash"
 alias w="sudo wifi-menu"
 alias rgl="rvm gemset list"
+alias pw="sudo poweroff -i"
 
 
 # Set to this to use case-sensitive completion
@@ -61,7 +62,7 @@ alias rgl="rvm gemset list"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node)
+plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,4 +96,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=~/Descargas/utils/sbt/bin:$PATH
 export GOPATH=$HOME/goprojects
 export PATH=$PATH:$GOPATH/bin
+xset -b
 

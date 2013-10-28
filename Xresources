@@ -5,6 +5,7 @@ Rxvt*font: xft:Inconsolata:pixelsize=20:antialias=true
 
 Urxvt*font: xft:DejaVuSansMono:pixelsize=18:antialias=true
 URxvt.boldFont: xft:DejaVuSansMono:bold:pixelsize=18:antialias=true
+URxvt.urgentOnBell: False
 
 Rxvt*scrollBar: False
 Rxvt*scrollTtyOutput: False
