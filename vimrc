@@ -1,11 +1,10 @@
+"Configuracion Basica
 set nocompatible " improved
 set encoding=utf-8
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
-
 call neobundle#rc(expand('~/.vim/bundle/'))
-
 filetype on
 filetype plugin on
 filetype indent on
@@ -14,34 +13,20 @@ nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
-"vmap <C-c> "+yi
-"vmap <C-x> "+c
-"vmap <C-v> c<ESC>"+p
-"imap <C-v> <ESC>"+pa
-
-"----------------------------------------------
-"---------------Vundle old files---------------
-" ---------------------------------------------
-
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-"256 color bash
-"Bundle 'gmarik/vundle'
-
 syntax on
 syntax enable
-
 set background=light
+set cursorline
+" Configuarciones viejas
 "let g:solarized_termcolors=256
 "set t_Co=256
-
-set cursorline
-
 "fix erase background color problem!!!
 "if &term =~ '256color'
 "    elsif
 "    colorscheme molokai
 "    endif
+
+"Plugins Neobundles
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
@@ -90,14 +75,8 @@ NeoBundle 'mileszs/ack.vim'
 "NeoBundle 'vim-scripts/indenthtml.vim'
 
 
-"snippets
-let g:neosnippet#snippets_directory='~/.snippets'
 
-"tagbar
-nmap <F6> :TagbarToggle<CR>
-
-
-"colorschemes
+"Themes colorschemes
 NeoBundle 'joedicastro/vim-molokai256'
 NeoBundle 'sjl/badwolf'
 NeoBundle 'tomasr/molokai'
@@ -120,6 +99,12 @@ let g:molokai_original = 1
 "let g:solarized_italic=1    
 "let g:solarized_contrast='high'
 "let g:solarized_visibility='high'
+
+"snippets
+let g:neosnippet#snippets_directory='~/.snippets'
+
+"tagbar
+nmap <F6> :TagbarToggle<CR>
 
 "-------------tagbar-----------------
 "nmap <F5> :TagbarToggle<CR>
@@ -178,7 +163,6 @@ let g:snipMate.scope_aliases['ruby'] = 'ruby,ruby-rails,ruby-1.9'
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_highlight_lines = 0
 
-set nocompatible
 
 "let g:clipbrdDefaultReg = '+'
 
@@ -462,6 +446,10 @@ function!   QuickFixOpenAll()
         let s:prev_val = s:curr_val
     endfor
 endfunction
+
+
+" Syntastic checkers
+let g:syntastic_html_checkers=['w3']
 
 
 
