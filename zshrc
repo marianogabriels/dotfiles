@@ -30,6 +30,7 @@ alias p="xclip -o | bash"
 alias w="sudo wifi-menu"
 alias rgl="rvm gemset list"
 alias pw="sudo poweroff -i"
+alias tmux="tmux -L default"
 
 
 # Set to this to use case-sensitive completion

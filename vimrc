@@ -64,6 +64,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'jpalardy/vim-slime'
 
 
 "let g:ackprg = 'ag --nogroup --column'
@@ -454,5 +455,11 @@ let g:syntastic_html_checkers=['w3']
 
 
 "autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
+
+" Repl
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name":"default", "target_pane":"1"}
+let g:slime_paste_file = "$HOME/.smile_paste"
+
 
 NeoBundleCheck
