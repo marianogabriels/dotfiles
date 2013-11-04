@@ -22,9 +22,9 @@ set cursorline
 "set t_Co=256
 "fix erase background color problem!!!
 "if &term =~ '256color'
-"    elsif
+"elseif
 "    colorscheme molokai
-"    endif
+"endif
 
 "Plugins Neobundles
 NeoBundle 'Shougo/vimproc', {
@@ -83,10 +83,10 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'zaiste/Atom'
+colorscheme badwolf
 "colorscheme badwolf
-colorscheme molokai
 
-let g:molokai_original = 1
+"let g:molokai_original = 1
 "let g:rehash256 = 1
 
 
