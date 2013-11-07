@@ -31,6 +31,7 @@ alias w="sudo wifi-menu"
 alias rgl="rvm gemset list"
 alias pw="sudo poweroff -i"
 alias tmux="tmux -L default"
+alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
 
 
 # Set to this to use case-sensitive completion
