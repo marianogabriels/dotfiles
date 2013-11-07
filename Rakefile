@@ -62,7 +62,11 @@ def link_file(file)
   #  system %Q{cp "$PWD/#{file}" "$HOME/.#{file}"}
   else
     puts "linking ~/.#{file}"
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"} unless file =~ /subtitle/
+    if file =~ /subtitle/
+      system %Q{ln -s "$PWD/#{file}" "$HOME/#{file}"}
+    else
+      system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    end
   end
 end
 
