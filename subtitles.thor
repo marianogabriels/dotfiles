@@ -2,6 +2,7 @@ require 'open-uri'
 require 'net/http'
 require 'nokogiri'
 require 'debugger'
+
 class Subtitles < Thor
   desc "searcher tal cual se busca en subdivx", "regexp para encontrar la release de la scene"
   def searcher(subtitulo_a_buscar,release = '.+', search_regexp = /thesubfactory|argenteam/mi )
@@ -9,8 +10,6 @@ class Subtitles < Thor
     system("rm -f temp/*.srt")
     system("rm -f *.srt")
     release_regexp = Regexp.new(release,'i')
-
-
     sanatize_search = subtitulo_a_buscar.gsub("\ ", '+')
     doc =Nokogiri::HTML(open( "http://www.subdivx.com/index.php?buscar=#{sanatize_search}&accion=5&masdesc=&subtitulos=1&realiza_b=1"))
     texto_descripcion = doc.css('div#buscador_detalle_sub')
