@@ -24,11 +24,12 @@ alias cleant="rm -r -f ~/.tmp/* && sudo rm -r -f /var/tmp/*.*"
 alias agile="~/projects/agilerails/ecommerce_sample"
 alias perldoc="perldoc -u -f"
 alias mycheatsheet="cd ~/Dropbox/web_/mycheatsheets"
-alias rv=".ruby-version"
+alias rv="touch .ruby-version"
 alias rg=".ruby-gemset"
 alias p="xclip -o | bash"
 alias w="sudo wifi-menu"
 alias rgl="rvm gemset list"
+alias rgu="rvm gemset use"
 alias pw="sudo poweroff -i"
 alias tmux="tmux -L default"
 alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
@@ -64,7 +65,7 @@ alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go)
+plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go docker)
 
 source $ZSH/oh-my-zsh.sh
 
