@@ -10,8 +10,11 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="random"
 
 #ZSH_THEME="random"
-ZSH_THEME="af-magic"
-
+if [[ "$USER" == "vagrant" ]];then
+    ZSH_THEME="robbyrussell"
+else
+    ZSH_THEME="af-magic"
+fi
 
 
 # Example aliases
