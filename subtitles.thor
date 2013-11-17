@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'debugger'
 
 class Subtitles < Thor
-  desc "searcher tal cual se busca en subdivx", "regexp para encontrar la release de la scene"
+  desc "searcher", "regexp scene matcher"
   def searcher(subtitulo_a_buscar,release = '.+', search_regexp = /thesubfactory|argenteam/mi )
     system("rm -f bajar*")
     system("rm -f temp/*.srt")

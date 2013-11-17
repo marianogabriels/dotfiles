@@ -10,7 +10,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="random"
 
 #ZSH_THEME="random"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
 
 
 
@@ -33,6 +33,10 @@ alias rgu="rvm gemset use"
 alias pw="sudo poweroff -i"
 alias tmux="tmux -L default"
 alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
+alias docker_clean="docker rm `docker ps -a -q`"
+alias dockerrm="docker rmi $(docker images | grep '^<none>'| awk '{print $3}')"
+alias o="xclip -o"
+
 
 
 # Set to this to use case-sensitive completion
@@ -65,7 +69,7 @@ alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go docker)
+plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go docker vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
