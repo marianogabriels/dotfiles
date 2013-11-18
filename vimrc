@@ -66,6 +66,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'dhruvasagar/vim-table-mode'
 
 
 "let g:ackprg = 'ag --nogroup --column'
@@ -397,7 +398,7 @@ map <S-h> :tabp<CR>
 "nnoremap <space>/ :Unite grep:.<cr>
 "
 "Ack search 
-nnoremap <space>/ :Ack <cr>
+"nnoremap <space>/ :Ack <cr> <cr>
 
 if executable('ag')
     let g:unite_source_grep_command='ag'
@@ -498,9 +499,8 @@ let g:unite_source_menu_menus.git.command_candidates = [
     \['▷ git cd           (Fugitive)',
         \'Gcd'],
     \]
-nnoremap <silent>[menu]g :Unite -silent -start-insert menu:git<CR>
-
-
+nnoremap <silent><space>/ :Unite -silent -start-insert menu<CR>
+"nnoremap <silent><space>/ :Unite -silent -start-insert menu:git<CR>
 
 
 NeoBundleCheck
