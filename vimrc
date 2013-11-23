@@ -459,6 +459,8 @@ endfunction
 
 " Syntastic checkers
 let g:syntastic_html_checkers=['w3']
+let g:syntastic_javascript_checkers = ['jslint']
+
 
 
 
