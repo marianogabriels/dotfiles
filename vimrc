@@ -460,6 +460,11 @@ endfunction
 " Syntastic checkers
 let g:syntastic_html_checkers=['w3']
 let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_always_populate_loc_list=1
+
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
 
 
