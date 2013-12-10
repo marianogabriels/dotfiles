@@ -255,8 +255,6 @@ endfunction
 "inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "inoremap <s-tab> <c-n>
 
-" Enable heavy omni completion.
-
 
 
 
