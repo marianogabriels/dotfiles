@@ -39,6 +39,7 @@ alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
 alias docker_clean="docker rm `docker ps -a -q`"
 alias dockerrm="docker rmi $(docker images | grep '^<none>'| awk '{print $3}')"
 alias o="xclip -o"
+alias flstudio="wine /home/mariano/.wine/drive_c/Program\ Files\ \(x86\)/Image-Line/FL\ Studio\ 11/FL.exe"
 
 
 
