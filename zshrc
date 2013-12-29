@@ -10,11 +10,11 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="random"
 
 #ZSH_THEME="random"
-if [[ "$USER" == "vagrant" ]];then
+#if [[ "$USER" == "vagrant" ]];then
     ZSH_THEME="robbyrussell"
-else
-    ZSH_THEME="af-magic"
-fi
+#else
+#    ZSH_THEME="af-magic"
+#fi
 
 
 # Example aliases
@@ -36,8 +36,6 @@ alias rgu="rvm gemset use"
 alias pw="sudo poweroff -i"
 alias tmux="tmux -L default"
 alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
-alias docker_clean="docker rm `docker ps -a -q`"
-alias dockerrm="docker rmi $(docker images | grep '^<none>'| awk '{print $3}')"
 alias o="xclip -o"
 alias flstudio="wine /home/mariano/.wine/drive_c/Program\ Files\ \(x86\)/Image-Line/FL\ Studio\ 11/FL.exe"
 
@@ -73,7 +71,7 @@ alias flstudio="wine /home/mariano/.wine/drive_c/Program\ Files\ \(x86\)/Image-L
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go docker vagrant)
+plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
