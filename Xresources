@@ -1,11 +1,23 @@
 Rxvt.buffered: true
 !Rxvt.font:     xft:Terminus:pixelsize=12;antialias=true
-Rxvt.boldFont: xft:Inconsolata:bold:pixelsize=20:antialias=true
-Rxvt*font: xft:Inconsolata:pixelsize=20:antialias=true
+Rxvt.boldFont: xft:Inconsolata:bold:pixelsize=22:antialias=true
+Rxvt*font: xft:Inconsolata:pixelsize=22:antialias=true
 
-Urxvt*font: xft:DejaVuSansMono:pixelsize=20:antialias=true
-URxvt.boldFont: xft:DejaVuSansMono:bold:pixelsize=20:antialias=true
+Urxvt*font: xft:Inconsolata:pixelsize=22:antialias=true
+URxvt.boldFont: xft:Inconsolata:bold:pixelsize=22:antialias=true
 URxvt.urgentOnBell: False
+
+
+   URxvt.perl-ext-common: ...,clipboard
+   URxvt.keysym.M-c:   perl:clipboard:copy
+   URxvt.keysym.M-v:   perl:clipboard:paste
+   URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+
+URxvt.perl-ext: default,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
 
 Rxvt*scrollBar: False
 Rxvt*scrollTtyOutput: False

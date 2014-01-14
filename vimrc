@@ -78,6 +78,8 @@ NeoBundle 'dhruvasagar/vim-table-mode'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/indenthtml.vim'
 
+let g:syntastic_html_checkers=['w3']
+let g:syntastic_always_populate_loc_list=1
 
 
 "Themes colorschemes
@@ -456,9 +458,6 @@ endfunction
 
 
 " Syntastic checkers
-let g:syntastic_html_checkers=['w3']
-let g:syntastic_javascript_checkers = ['jslint']
-let g:syntastic_always_populate_loc_list=1
 
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
