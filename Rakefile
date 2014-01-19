@@ -4,7 +4,7 @@ task :install do
   switch_to_zsh
   install_neobundle
   replace_all = true
-  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh]
+  files = Dir['*'] - %w[Rakefile README.md cliboard LICENSE oh-my-zsh]
   #files "oh-my-zsh/custom/"
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
