@@ -44,7 +44,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 #Custom windows borders
 #for_window [title=" - Chromium$"] border 1pixel
-for_window [title="urxvt$"] border 1pixel
+for_window [title="urxvt"] border 1pixel
+for_window [title="sakura$"] border 1pixel
 for_window [title="gnome-terminal"] border 1pixel
 
 
@@ -63,6 +64,7 @@ bindsym $mod+m exec urxvt -e alsamixer
 # start a terminal
 #bindsym $mod+Return exec gnome-terminal --class gnome-terminal
 bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec sakura
 #i3-sensible-terminal
 
 # kill focused window
