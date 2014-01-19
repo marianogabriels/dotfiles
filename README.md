@@ -11,3 +11,8 @@ requeriments:
     i3wm 
     Vim  7.4
     Tmux  1.8
+
+
+
+urxt clipboard:
+    cp clipboard /usr/lib/urxvt/perl/
