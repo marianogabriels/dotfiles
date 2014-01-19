@@ -68,6 +68,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'dhruvasagar/vim-table-mode'
+NeoBundle 'slim-template/vim-slim'
 
 
 "let g:ackprg = 'ag --nogroup --column'
