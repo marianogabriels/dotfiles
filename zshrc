@@ -37,7 +37,7 @@ alias pw="sudo poweroff -i"
 alias tmux="tmux -L default"
 alias thor subtitles:searcher="thor ~/projects/sub_scraper/subtitles.thor"
 alias o="xclip -o"
-alias flstudio="wine /home/mariano/.wine/drive_c/Program\ Files\ \(x86\)/Image-Line/FL\ Studio\ 11/FL.exe"
+alias flstudio="wine /home/mariano/.wine/drive_c/Program\ Files/Image-Line/FL\ Studio\ 11/FL.exe"
 
 
 
