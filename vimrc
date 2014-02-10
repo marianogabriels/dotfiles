@@ -359,6 +359,13 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" RUby complete tags
+"=============================================================
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+"=============================================================
+
 
 
 "----------------------------------------------------------------------------------"
