@@ -15,19 +15,42 @@ nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
 syntax on
 syntax enable
-set background=light
-set cursorline
-let g:unite_source_menu_menus = {}
-" Configuarciones viejas
-"let g:solarized_termcolors=256
-"set t_Co=256
-"fix erase background color problem!!!
-"if &term =~ '256color'
-"elseif
-"    colorscheme molokai
-"endif
 
-"Plugins Neobundles
+let g:unite_source_menu_menus = {}
+
+"Configuracion basica
+set clipboard=unnamedplus
+set ignorecase                  " set case insensitivity
+set mouse=a                     " try to use a mouse in the console (wimp!)
+set number
+set incsearch                 " incremental search
+set hlsearch                  " highlight the search
+set showmatch                 " show matching bracket
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set laststatus=2
+set showmatch
+set cursorline
+set incsearch
+set hlsearch
+set backup
+set background=light
+set ruler
+set showcmd
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+" Elegant tab switcher
+map <S-k> :tabn<CR>
+map <S-j> :tabp<CR>
+map <S-l> :tabn<CR>
+map <S-h> :tabp<CR>
+
+
+
+"-----------------Plugins Neobundles-----------------
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
@@ -43,20 +66,15 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'mattn/zencoding-vim'
-"NeoBundle 'mattn/gist-vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle "tomtom/tlib_vim"
 NeoBundle 'Shougo/neosnippet'
-"NeoBundle 'Shougo/neocomplete'
-"NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
-"NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'godlygeek/tabular'
-"NeoBundle 'honza/vim-snippets'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'jimsei/winresizer'
 NeoBundle 'christoomey/vim-tmux-navigator'
@@ -70,17 +88,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'dhruvasagar/vim-table-mode'
 NeoBundle 'slim-template/vim-slim'
 
-
-"let g:ackprg = 'ag --nogroup --column'
-"NeoBundle 'majutsushi/tagbar'
-"NeoBundle 'Valloric/YouCompleteMe'
-"NeoBundle 'SirVer/ultisnips'
-"
-"NeoBundle 'nathanaelkane/vim-indent-guides'
-"NeoBundle 'vim-scripts/indenthtml.vim'
-
-
-
 "Themes colorschemes
 NeoBundle 'joedicastro/vim-molokai256'
 NeoBundle 'sjl/badwolf'
@@ -88,486 +95,100 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'zaiste/Atom'
 colorscheme badwolf
-"colorscheme badwolf
 
-"let g:molokai_original = 1
-"let g:rehash256 = 1
-
-
-"let g:badwolf_darkgutter = 1
-
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=0
-"let g:solarized_degrade=0
-"let g:solarized_bold=1    
-"let g:solarized_underline=1
-"let g:solarized_italic=1    
-"let g:solarized_contrast='high'
-"let g:solarized_visibility='high'
-
-"snippets
-
-
+" LEADER
 let mapleader=','
 let maplocalleader= ' '
 
+"neosnippets directory
 let g:neosnippet#snippets_directory='~/.snippets'
 
 "tagbar
 nmap <F6> :TagbarToggle<CR>
-
-"-------------tagbar-----------------
-"nmap <F5> :TagbarToggle<CR>
-
-"-------Zen coding--------
-"let g:user_zen_leader_key = '<C-SPACE>'
-
-"tagbar
 let g:tagbar_ctags_bin = 1
+
 "tabular
 let g:tabular_loaded = 1
 
 "folding
-"nnoremap <F1> za
-"vnoremap <F1> zf
-
-"set background=dark
-
+nnoremap <F1> za
+vnoremap <F1> zf
 
 "Ident guidelines
 let g:indentLine_char= '┆'
 let g:indentLine_enabled = 1
 let g:indentLine_filetype = []
-"let g:indentLine_color_term = 239
 
-"---------------------------------------------------
-"let g:indent_guides_guide_size = 1
-"let g:indent_guides_auto_colors = 0
-"let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-
-"highlight Normal guibg=black guifg=white
-"
-" Colors
-" Bron #BC9458
-"
-"hi IndentGuidesOdd ctermbg=#FFC66D
-"hi IndentGuidesEven ctermbg=#BC9458
-
-
-
-"autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
-
-
-"git g:gitgutter fix tabs performance
+"Git gutter
 let g:gitgutter_eager = 0
-
-
-let g:snipMate = {}
-
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['ruby'] = 'ruby,ruby-rails,ruby-1.9'
-
-
-"airblade/vit-gitgutter by default
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_highlight_lines = 0
 
-
-"let g:clipbrdDefaultReg = '+'
-
-"gist xclip command
-"let g:gist_clip_command = 'xclip -selection clipboard'
-
-
-
 "========================= Start of runners =========================
-"ruby run without warnings                  
-"autocmd FileType ruby map <F5> :w<CR>:!clear && ruby %<CR>
-" Custom syntax checked
-
-"autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
-
-
 autocmd FileType ruby map <F9> :w<CR>:!clear && ruby -c %<CR>
-" Ruby run
 autocmd FileType ruby map <F8> :w<CR>:!clear && ruby -w  %<CR>
-
-" Perl run
 autocmd FileType perl map <F8> :w<CR>:!clear && perl %<CR>
-
-" firefox 
 autocmd FileType html map <F8> :w<CR>:!clear && chromium %<CR>
-
-"javascript run juejuejue
 autocmd FileType javascript map <F8> :w<CR>:!clear && node %<CR>
 "==========================+END of runners===========================
 
-
-"Custom EASY split navigation
+"really EASY split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 
-
-""""""""""""""""""""""
-"      BASIC SETS    "
-""""""""""""""""""""""
-set clipboard=unnamedplus
-set ignorecase                  " set case insensitivity
-set mouse=a                     " try to use a mouse in the console (wimp!)
-set number
-" :Searching
-set incsearch                 " incremental search
-set hlsearch                  " highlight the search
-set showmatch                 " show matching bracket
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-"set autoindent
-set laststatus=2
-set showmatch
-set incsearch
-set hlsearch
-"et diffopt=filler,iwhite     " ignore all whitespace and sync
-
-"backup to ~./.tmp
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MULTIPURPOSE TAB KEY
-" Indent if we're at the beginning of a line. Else, do completion.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-"inoremap <s-tab> <c-n>
-
-
-
-
-
-
-
-"Ruby
+"Filetype tab configuration
 autocmd FileType ruby,haml,html,eruby,yaml,javascript,sass,cucumber set sw=2 sts=2
-
-
-
-" X?HTML & XML
 autocmd FileType html,xhtml,xml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-
-"CSS
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
-
-"javaScript
 autocmd BufRead,BufNewFile *.json setfiletype javascript
 autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 let javascript_enable_domhtmlcss=1
-
-"PHP
 autocmd FileType php setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
-
-"Vimscript
 autocmd FileType vim setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
-
-"Shell
 autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 
 
-
 "newww
-set ruler
-set showcmd
 
-
-"FUCKING ARROW l
+"Chau Arrows
 map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
 
-
-
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-"inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-
-
-
-
-"------------------------------
-"----------Neocomplete---------
-"------------------------------
-"function! s:my_cr_function()
-"    return neocomplete#smart_close_popup() . "\<CR>"
-"    " For no inserting <CR> key.
-    "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-"endfunction
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"  let g:neocomplete#sources#omni#input_patterns = {}
-"endif
-"" For perlomni.vim setting.
-"" https://github.com/c9s/perlomni.vim
-"let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-"if !exists('g:neocomplete#keyword_patterns')
-"    let g:neocomplete#keyword_patterns = {}
-"endif
-"let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-"
-"let g:acp_enableAtStartup = 0
-"let g:neocomplete#enable_at_startup = 0
-"let g:neocomplete#enable_smart_case = 1
-"let g:neocomplete#sources#syntax#min_keyword_length = 3
-"let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-"
-"let g:neocomplete#sources#dictionary#dictionaries = {
-"    \ 'default' : '',
-"    \ 'vimshell' : $HOME.'/.vimshell_hist',
-"    \ 'scheme' : $HOME.'/.gosh_completions'
-"        \ }
-"
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-" Enable heavy omni completion
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"    let g:neocomplete#sources#omni#input_patterns = {}
-"endif
-"=============================================================
-
+"Autocomplete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" RUby complete tags
-"=============================================================
+autocmd FileType perl setlocal complete-=i
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby let g:rubycomplete_buffer_loading=1
 autocmd FileType ruby let g:rubycomplete_classes_in_global=1
-"=============================================================
 
-
-
-"----------------------------------------------------------------------------------"
-"-------------------------Neosnippets----------------------------------------------" 
-"----------------------------------------------------------------------------------"
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
-let g:neosnippet#enable_snipmate_compatibility = 1
-
-
-" Elegant tab switcher
-
-map <S-k> :tabn<CR>
-map <S-j> :tabp<CR>
-map <S-l> :tabn<CR>
-map <S-h> :tabp<CR>
-
-"map <S-n> :tabnew<CR>
-
-"--------------------------------------------------
-"------------- YCM AND ULTISNIPS-------------------
-"--------------------------------------------------
-"let g:ycm_key_list_previous_completion=['<Up>']/
-"let g:UltiSnipsExpandTrigger="<c-tab>"
-"let g:UltiSnipsListSnippets="<c-s-tab>"
-
-
-"Unite search ag grep
-"nnoremap <space>/ :Unite grep:.<cr>
-"
-"Ack search 
-"nnoremap <space>/ :Ack <cr> <cr>
-
-if executable('ag')
-    let g:unite_source_grep_command='ag'
-    let g:unite_source_grep_default_opts='--nocolor --nogroup -a -S'
-    let g:unite_source_grep_recursive_opt=''
-    let g:unite_source_grep_search_word_highlight = 1
-endif
-
-"UNITE history
-"let g:unite_source_history_yank_enable = 1
-"nnoremap <space>y :Unite history/yank<cr>
-
-"custom syntax
-" .md files with markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.thor set filetype=ruby
-"less syntax highlight
 au BufRead,BufNewFile *.less setfiletype css
 
-"map <Leader>a :Tab / = /l0<CR>:Tab / :/l0<CR>
-
-
-
-
-
-command! -nargs=0 -bar Qargs execute 'args ' . QuickfixFilenames()
-function! QuickfixFilenames()
-    " Building a hash ensures we get each buffer only once
-    let buffer_numbers = {}
-    for quickfix_item in getqflist()
-        let buffer_numbers[quickfix_item['bufnr']] =
-        bufname(quickfix_item['bufnr'])
-    endfor
-    return join(values(buffer_numbers))
-endfunction
-
-
-function!   QuickFixOpenAll()
-    if empty(getqflist())
-        return
-    endif
-    let s:prev_val = ""
-    for d in getqflist()
-        let s:curr_val = bufname(d.bufnr)
-        if (s:curr_val != s:prev_val)
-            exec "edit " . s:curr_val
-        endif
-        let s:prev_val = s:curr_val
-    endfor
-endfunction
-
-
 " Syntastic checkers
-
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-
 let g:syntastic_html_checkers=['w3']
 let g:syntastic_javascript_checkers=['jslint', 'jshint']
 let g:syntastic_always_populate_loc_list=1
-
-
-
-
 "autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
 
-" Repl
+" Repl-tmux
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name":"default", "target_pane":"1"}
 let g:slime_paste_file = "$HOME/.smile_paste"
 
 
-" file searching menu {{{
-let g:unite_source_menu_menus.grep = {
-    \ 'description' : '           search files
-        \                                          ⌘ [space]a',
-    \}
-let g:unite_source_menu_menus.grep.command_candidates = [
-    \['▷ grep (ag → ack → grep)                                     ⌘ ,a',
-        \'Unite -no-quit grep'],
-    \['▷ find',
-        \'Unite find'],
-    \['▷ locate',
-        \'Unite -start-insert locate'],
-    \['▷ vimgrep (very slow)',
-        \'Unite vimgrep'],
-    \]
-nnoremap <silent>[menu]a :Unite -silent menu:grep<CR>
-" }}}
-
-
-
-"SEARCH IN BUFFER
-let g:unite_source_menu_menus.searching = {
-    \ 'description' : '      searchs inside the current buffer
-        \                     ⌘ [space]f',
-    \}
-let g:unite_source_menu_menus.searching.command_candidates = [
-    \['▷ search line                                                ⌘ ,f',
-        \'Unite -auto-preview -start-insert line'],
-    \['▷ search word under the cursor                               ⌘ [space]8',
-        \'UniteWithCursorWord -no-split -auto-preview line'],
-    \['▷ search outlines & tags (ctags)                             ⌘ ,t',
-        \'Unite -vertical -winwidth=40 -direction=topleft -toggle outline'],
-    \['▷ search marks',
-        \'Unite -auto-preview mark'],
-    \['▷ search folds',
-        \'Unite -vertical -winwidth=30 -auto-highlight fold'],
-    \['▷ search changes',
-        \'Unite change'],
-    \['▷ search jumps',
-        \'Unite jump'],
-    \['▷ search undos',
-        \'Unite undo'],
-    \['▷ search tasks                                               ⌘ ,;',
-        \'Unite -toggle grep:%::FIXME|TODO|NOTE|XXX|COMBAK|@todo'],
-    \]
-nnoremap <silent><localleader>f :Unite -silent menu:searching<CR>
-
-"Uniteeeee
-let g:unite_source_menu_menus.git = {
-    \ 'description' : '            gestionar repositorios git
-        \                            ⌘ [espacio]g',
-    \}
-let g:unite_source_menu_menus.git.command_candidates = [
-    \['▷ tig                                                        ⌘ ,gt',
-        \'normal ,gt'],
-    \['▷ git status       (Fugitive)                                ⌘ ,gs',
-        \'Gstatus'],
-    \['▷ git diff         (Fugitive)                                ⌘ ,gd',
-        \'Gdiff'],
-    \['▷ git commit       (Fugitive)                                ⌘ ,gc',
-        \'Gcommit'],
-    \['▷ git log          (Fugitive)                                ⌘ ,gl',
-        \'exe "silent Glog | Unite quickfix"'],
-    \['▷ git blame        (Fugitive)                                ⌘ ,gb',
-        \'Gblame'],
-    \['▷ git stage        (Fugitive)                                ⌘ ,gw',
-        \'Gwrite'],
-    \['▷ git checkout     (Fugitive)                                ⌘ ,go',
-        \'Gread'],
-    \['▷ git rm           (Fugitive)                                ⌘ ,gr',
-        \'Gremove'],
-    \['▷ git mv           (Fugitive)                                ⌘ ,gm',
-        \'exe "Gmove " input("destino: ")'],
-    \['▷ git push         (Fugitive, salida por buffer)             ⌘ ,gp',
-        \'Git! push'],
-    \['▷ git pull         (Fugitive, salida por buffer)             ⌘ ,gP',
-        \'Git! pull'],
-    \['▷ git prompt       (Fugitive, salida por buffer)             ⌘ ,gi',
-        \'exe "Git! " input("comando git: ")'],
-    \['▷ git cd           (Fugitive)',
-        \'Gcd'],
-    \]
-nnoremap <silent><localleader>u :Unite -silent -start-insert menu<CR>
-"nnoremap <silent><space>/ :Unite -silent -start-insert menu:git<CR>
-
-
+"Neobundle
 NeoBundleCheck
