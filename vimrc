@@ -4,10 +4,12 @@ set encoding=utf-8
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
+
 call neobundle#rc(expand('~/.vim/bundle/'))
 filetype on
 filetype plugin on
 filetype indent on
+"set rtp+=$GOROOT/misc/vim
 NeoBundleFetch 'Shougo/neobundle.vim'
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
@@ -87,6 +89,8 @@ NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'dhruvasagar/vim-table-mode'
 NeoBundle 'slim-template/vim-slim'
+"NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'jnwhiteh/vim-golang'
 
 "Themes colorschemes
 NeoBundle 'joedicastro/vim-molokai256'
