@@ -1,22 +1,21 @@
 "Configuracion Basica
 set nocompatible " improved
 set encoding=utf-8
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+
 filetype on
 filetype plugin on
 filetype indent on
-"set rtp+=$GOROOT/misc/vim
-NeoBundleFetch 'Shougo/neobundle.vim'
+set rtp+=$GOROOT/misc/vim
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
 syntax on
 syntax enable
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 let g:unite_source_menu_menus = {}
 
@@ -51,53 +50,45 @@ map <S-l> :tabn<CR>
 map <S-h> :tabp<CR>
 
 
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-markdown'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'mattn/zencoding-vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'scrooloose/syntastic'
+Bundle 'altercation/vim-colors-solarized'
+Bundle "tomtom/tlib_vim"
+Bundle 'Shougo/neosnippet'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'Shougo/unite.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-surround'
+Bundle 'jimsei/winresizer'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'Yggdroot/indentLine'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'pangloss/vim-javascript'
+Bundle 'othree/html5.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'jpalardy/vim-slime'
+Bundle 'tpope/vim-fugitive'
+Bundle 'dhruvasagar/vim-table-mode'
+Bundle 'slim-template/vim-slim'
+Bundle 'Blackrush/vim-gocode'
+"Bundle 'jnwhiteh/vim-golang'
+"Bundle 'uza/go.vim'
 
-"-----------------Plugins Neobundles-----------------
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle "tomtom/tlib_vim"
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'jimsei/winresizer'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'dhruvasagar/vim-table-mode'
-NeoBundle 'slim-template/vim-slim'
-"NeoBundle 'Blackrush/vim-gocode'
-NeoBundle 'jnwhiteh/vim-golang'
 
 "Themes colorschemes
-NeoBundle 'joedicastro/vim-molokai256'
-NeoBundle 'sjl/badwolf'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'zaiste/Atom'
+Bundle 'joedicastro/vim-molokai256'
+Bundle 'sjl/badwolf'
+Bundle 'tomasr/molokai'
+Bundle 'jpo/vim-railscasts-theme'
+Bundle 'zaiste/Atom'
 colorscheme badwolf
 
 " LEADER
@@ -179,6 +170,15 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufRead,BufNewFile *.less setfiletype css
 
+" Golang
+au BufRead,BufNewFile *.go set filetype=go
+"au BufRead,BufNewFile filetype off
+"au BufRead,BufNewFile filetype plugin indent off
+"au BufRead,BufNewFile set runtimepath+=$GOROOT/misc/vim
+"au BufRead,BufNewFile filetype plugin indent on
+"au BufRead,BufNewFile syntax on
+
+
 " Syntastic checkers
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
@@ -192,7 +192,3 @@ let g:syntastic_always_populate_loc_list=1
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name":"default", "target_pane":"1"}
 let g:slime_paste_file = "$HOME/.smile_paste"
-
-
-"Neobundle
-NeoBundleCheck
