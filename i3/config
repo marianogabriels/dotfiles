@@ -223,14 +223,14 @@ bar {
    	status_command i3status
    	tray_output none
 	colors {
-		background #222222
+		background #000000
    		#statusline 605c5a 
    		statusline  #5E7F9C
 		# item				 border	  bg	  fg
   		focused_workspace	#5E7F9C #101010 #5E7FAF
    		active_workspace	#3300FF #101010 #101010
-   		inactive_workspace	#222222 #222222 #5E7F9C
-		urgent_workspace	#2e3436 #9a878f
+   		inactive_workspace	#000000 #000000 #5E7F9C
+		urgent_workspace	#2e3436 #000000
 	}
 }
 
