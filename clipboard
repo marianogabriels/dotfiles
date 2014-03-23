@@ -1,6 +1,5 @@
+#! /usr/bin/perl
 #script to copy/paste text in URXVT
-
-#! perl
 
 sub on_sel_grab {
     my $query = $_[0]->selection;
