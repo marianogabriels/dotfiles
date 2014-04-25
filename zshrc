@@ -109,3 +109,4 @@ xset -b
 
 
 [ -s "/home/mschmidt/.nvm/nvm.sh" ] && . "/home/mschmidt/.nvm/nvm.sh" # This loads nvm
+source ~/.aliases

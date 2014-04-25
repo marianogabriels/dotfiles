@@ -227,11 +227,11 @@ bar {
 	colors {
 		background #000000
    		#statusline 605c5a 
-   		statusline  #5E7F9C
+   		statusline  #FFFFFF
 		# item				 border	  bg	  fg
-  		focused_workspace	#5E7F9C #101010 #5E7FAF
-   		active_workspace	#3300FF #101010 #101010
-   		inactive_workspace	#000000 #000000 #5E7F9C
+  		focused_workspace	#5E7F9C #5E7F9C #E0E0E0
+   		active_workspace	#3300FF #101010 #E0E0E0
+   		inactive_workspace	#000000 #000000 #E0E0E0
 		urgent_workspace	#2e3436 #000000
 	}
 }
