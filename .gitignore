@@ -5,3 +5,4 @@
 !.gitignore
 /tmuxinator/*
 !/tmuxinator/template_rails.yml
+i3/i3log
