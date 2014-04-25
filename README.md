@@ -7,11 +7,7 @@ Installation:
 rake install
 ```
 requeriments: 
-    zsh #=>  for OhMyZsh
-    i3wm 
-    Vim  7.4
-    Tmux  1.8
-
+    %w{ zsh i3wm4_7 Vim7_4 Tmux  1_8 }
 
 
 urxt clipboard:
