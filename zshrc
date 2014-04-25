@@ -107,3 +107,5 @@ export GOPATH=$HOME/goprojects
 export PATH=$PATH:$GOPATH/bin
 xset -b
 
+
+[ -s "/home/mschmidt/.nvm/nvm.sh" ] && . "/home/mschmidt/.nvm/nvm.sh" # This loads nvm
