@@ -109,4 +109,5 @@ xset -b
 
 
 [ -s "/home/mschmidt/.nvm/nvm.sh" ] && . "/home/mschmidt/.nvm/nvm.sh" # This loads nvm
+[[ -s "/home/mschmidt/.gvm/scripts/gvm" ]] && source "/home/mschmidt/.gvm/scripts/gvm"
 source ~/.aliases

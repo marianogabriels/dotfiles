@@ -5,8 +5,8 @@ set encoding=utf-8
 
 filetype on
 filetype plugin on
-filetype indent on
 set rtp+=$GOROOT/misc/vim
+filetype indent on
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
@@ -79,6 +79,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'dhruvasagar/vim-table-mode'
 Bundle 'slim-template/vim-slim'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'nsf/gocode', {'rtp': 'vim/'}
+
+
 "Bundle 'jnwhiteh/vim-golang'
 "Bundle 'uza/go.vim'
 
