@@ -44,9 +44,16 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 #Custom windows borders
 #for_window [title=" - Chromium$"] border 1pixel
-for_window [title="urxvt"] border 1pixel
+for_window [title="urxvt"] border none
 for_window [title="sakura$"] border 1pixel
 for_window [title="gnome-terminal"] border 1pixel
+# class                 border  backgr. text    indicator
+client.focused             #1793D0   #1793D0    #FFFFFF
+client.focused_inactive    #000000   #333333    #FFFFFF
+client.unfocused           #000000   #333333    #FFFFFF
+client.urgent              #FF0000   #FF0000    #FF0000
+
+
 
 
 font pango:DejaVu Sans Mono 09

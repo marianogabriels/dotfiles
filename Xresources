@@ -183,8 +183,8 @@ Urxvt.secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 *foreground: plain
 *cursorColor: lime
 *scrollColor: deepgravel
-*fadeColor: snow
-*fading: 20
+*fadeColor: darkroast
+*fading: 15
 
 ! black
 *color0: blackestgravel
