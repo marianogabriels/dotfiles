@@ -71,7 +71,7 @@ alias flstudio="wine /home/mariano/.wine/drive_c/Program\ Files/Image-Line/FL\ S
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #alias tmux="TERM=screen-256color-bce tmux"
-plugins=(git tmuxinator rvm bundler archlinux perl thor knife npm node vi-mode go vagrant)
+plugins=(git tmuxinator rvm bundler nvm archlinux perl thor knife npm node vi-mode go vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
