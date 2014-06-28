@@ -56,28 +56,21 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'mattn/zencoding-vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 Bundle "tomtom/tlib_vim"
-Bundle 'Shougo/neosnippet'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'Shougo/unite.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-surround'
 Bundle 'jimsei/winresizer'
-Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'Yggdroot/indentLine'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/html5.vim'
 Bundle 'mileszs/ack.vim'
-Bundle 'jpalardy/vim-slime'
 Bundle 'tpope/vim-fugitive'
 Bundle 'dhruvasagar/vim-table-mode'
-Bundle 'slim-template/vim-slim'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 
@@ -130,7 +123,7 @@ autocmd FileType html map <F8> :w<CR>:!clear && chromium %<CR>
 autocmd FileType javascript map <F8> :w<CR>:!clear && node %<CR>
 "==========================+END of runners===========================
 
-"really EASY split navigation
+"Easy split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -175,12 +168,6 @@ au BufRead,BufNewFile *.less setfiletype css
 
 " Golang
 au BufRead,BufNewFile *.go set filetype=go
-"au BufRead,BufNewFile filetype off
-"au BufRead,BufNewFile filetype plugin indent off
-"au BufRead,BufNewFile set runtimepath+=$GOROOT/misc/vim
-"au BufRead,BufNewFile filetype plugin indent on
-"au BufRead,BufNewFile syntax on
-
 
 " Syntastic checkers
 let g:syntastic_enable_signs=1
@@ -189,7 +176,6 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_html_checkers=['w3']
 let g:syntastic_javascript_checkers=['jslint', 'jshint']
 let g:syntastic_always_populate_loc_list=1
-"autocmd FileType eruby setl indentexpr=XmlIndentGet(v:lnum,1)
 
 " Repl-tmux
 let g:slime_target = "tmux"
