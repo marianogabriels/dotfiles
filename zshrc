@@ -111,3 +111,6 @@ xset -b
 [ -s "/home/mschmidt/.nvm/nvm.sh" ] && . "/home/mschmidt/.nvm/nvm.sh" # This loads nvm
 [[ -s "/home/mschmidt/.gvm/scripts/gvm" ]] && source "/home/mschmidt/.gvm/scripts/gvm"
 source ~/.aliases
+
+export CLOJURESCRIPT_HOME=/home/mschmidt/projects/clojurescript
+export PATH=$PATH:/home/mschmidt/projects/clojurescript/bin
