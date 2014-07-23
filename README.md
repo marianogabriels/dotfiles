@@ -1,4 +1,4 @@
-Dotfiles (very dirty dotfiles)
+Dotfiles (dirty dotfiles)
 ========
 
 Installation:
