@@ -3,8 +3,8 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = true
-  files = Dir['*'] - %w[Rakefile README.md cliboard LICENSE oh-my-zsh]
-  #files "oh-my-zsh/custom/"
+  skiped_files = %w[Rakefile README.md cliboard LICENSE oh-my-zsh]
+  files = Dir['*'] - skiped_files
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
 
@@ -32,18 +32,6 @@ task :install do
     end
   end
 end
-
-desc "install require packages"
-task :packages do
-  packages = %w[ack-grep git nodejs ]
-  packages.each { |p| system("sudo apt-get install #{p}") }
-end
-
-#def install_go(options={})
-#  #system %Q{ sudo apt-get install golang}\
-#  go get -u github.com/nsf/gocode 
-#end
-
 
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub(/\.erb$/, '')}"}
@@ -74,16 +62,9 @@ def switch_to_zsh
   if ENV["SHELL"] =~ /zsh/
     puts "using zsh"
   else
-    print "switch to zsh? (recommended) [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
+    optional "switch to zsh? (recommended)" do
       puts "switching to zsh"
-      #works for archlinux
       system %Q{ chsh -s /usr/bin/zsh }
-    when 'q'
-      exit
-    else
-      puts "skipping zsh"
     end
   end
 end
@@ -92,15 +73,21 @@ def install_oh_my_zsh
   if File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
     puts "found ~/.oh-my-zsh"
   else
-    print "install oh-my-zsh? [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
+    optional "install oh-my-zsh?" do
       puts "installing oh-my-zsh"
       system %Q{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
-    when 'q'
-      exit
-    else
-      puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
     end
+  end
+end
+
+def optional(answer)
+  print "#{answer} [ynq]"
+  case $stdin.gets.chomp
+  when 'y'
+    yield
+  when 'q'
+    exit
+  else
+    puts "skiping #{answer}"
   end
 end
