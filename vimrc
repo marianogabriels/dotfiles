@@ -14,8 +14,8 @@ vnoremap <C-p> "+gP
 syntax on
 syntax enable
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 let g:unite_source_menu_menus = {}
 
@@ -50,41 +50,44 @@ map <S-l> :tabn<CR>
 map <S-h> :tabp<CR>
 
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-markdown'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'scrooloose/syntastic'
-Bundle 'altercation/vim-colors-solarized'
-Bundle "tomtom/tlib_vim"
-Bundle 'kien/ctrlp.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-surround'
-Bundle 'jimsei/winresizer'
-Bundle 'Yggdroot/indentLine'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'pangloss/vim-javascript'
-Bundle 'othree/html5.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'dhruvasagar/vim-table-mode'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-markdown'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-rails'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomtom/tlib_vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-surround'
+Plugin 'jimsei/winresizer'
+Plugin 'Yggdroot/indentLine'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/html5.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 
-"Bundle 'jnwhiteh/vim-golang'
-"Bundle 'uza/go.vim'
+"Plugin 'jnwhiteh/vim-golang'
+"Plugin 'uza/go.vim'
 
 
 "Themes colorschemes
-Bundle 'joedicastro/vim-molokai256'
-Bundle 'sjl/badwolf'
-Bundle 'tomasr/molokai'
-Bundle 'jpo/vim-railscasts-theme'
-Bundle 'zaiste/Atom'
+Plugin 'joedicastro/vim-molokai256'
+Plugin 'sjl/badwolf'
+Plugin 'tomasr/molokai'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'zaiste/Atom'
+call vundle#end()
+
 colorscheme badwolf
 
 " LEADER
@@ -165,6 +168,7 @@ autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufRead,BufNewFile *.less setfiletype css
+au BufRead,BufNewFile *.scala setfiletype scala
 
 " Golang
 au BufRead,BufNewFile *.go set filetype=go

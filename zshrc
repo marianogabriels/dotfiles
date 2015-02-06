@@ -51,5 +51,4 @@ ZSH_TMUX_AUTOSTART=true
 export DISABLE_AUTO_TITLE=true
 export TERM="xterm-256color"
 xset -b
-
 source ~/.aliases
