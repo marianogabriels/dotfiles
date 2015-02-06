@@ -5,7 +5,6 @@ set encoding=utf-8
 
 filetype on
 filetype plugin on
-set rtp+=$GOROOT/misc/vim
 filetype indent on
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
@@ -15,9 +14,7 @@ syntax on
 syntax enable
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-let g:unite_source_menu_menus = {}
 
 "Configuracion basica
 set clipboard=unnamedplus
@@ -50,7 +47,9 @@ map <S-l> :tabn<CR>
 map <S-h> :tabp<CR>
 
 
+call vundle#begin()
 Plugin 'gmarik/vundle'
+Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-markdown'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdtree'
@@ -58,34 +57,22 @@ Plugin 'tpope/vim-rails'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomtom/tlib_vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
-Plugin 'jimsei/winresizer'
-Plugin 'Yggdroot/indentLine'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'Blackrush/vim-gocode'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-
-
-"Plugin 'jnwhiteh/vim-golang'
-"Plugin 'uza/go.vim'
-
 
 "Themes colorschemes
-Plugin 'joedicastro/vim-molokai256'
 Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
-Plugin 'jpo/vim-railscasts-theme'
-Plugin 'zaiste/Atom'
+"Plugin 'joedicastro/vim-molokai256'
+"Plugin 'jpo/vim-railscasts-theme'
+"Plugin 'zaiste/Atom'
 call vundle#end()
 
 colorscheme badwolf
@@ -94,12 +81,6 @@ colorscheme badwolf
 let mapleader=','
 let maplocalleader= ' '
 
-"neosnippets directory
-let g:neosnippet#snippets_directory='~/.snippets'
-
-"tagbar
-nmap <F6> :TagbarToggle<CR>
-let g:tagbar_ctags_bin = 1
 
 "tabular
 let g:tabular_loaded = 1
@@ -145,8 +126,6 @@ autocmd FileType vim setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 
 
-"newww
-
 "Chau Arrows
 map <Left> <Nop>
 map <Right> <Nop>
@@ -169,8 +148,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufRead,BufNewFile *.less setfiletype css
 au BufRead,BufNewFile *.scala setfiletype scala
-
-" Golang
 au BufRead,BufNewFile *.go set filetype=go
 
 " Syntastic checkers
