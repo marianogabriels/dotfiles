@@ -1,14 +1,14 @@
-Dotfiles (dirty dotfiles)
+dotfiles
 ========
 
-Installation:
+How to install:
 
-```
-rake install
-```
+* 'rake install'
+
 requeriments: 
-    %w{ zsh i3wm4_7 Vim7_4 Tmux  1_8 }
 
+* '%w{ zsh i3wm4_7 Vim7_4 Tmux  1_8 }'
 
 urxt clipboard:
-    cp clipboard /usr/lib/urxvt/perl/
+
+* 'cp clipboard /usr/lib/urxvt/perl/'
