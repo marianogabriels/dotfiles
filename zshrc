@@ -33,6 +33,7 @@ DISABLE_UNTRACKED_FILES_DIRTY=false
 
 # ::RVM:: 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/home/mschmidt/node_modules/phantomjs/lib/phantom/bin/
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # ::NVM::
 [ -s "/home/mschmidt/.nvm/nvm.sh" ] && . "/home/mschmidt/.nvm/nvm.sh" # This loads nvm
@@ -51,4 +52,8 @@ ZSH_TMUX_AUTOSTART=true
 export DISABLE_AUTO_TITLE=true
 export TERM="xterm-256color"
 xset -b
+export NVM_DIR="/home/mschmidt/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 source ~/.aliases
+
