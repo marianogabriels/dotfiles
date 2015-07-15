@@ -53,6 +53,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-markdown'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-rails'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
@@ -81,7 +82,6 @@ colorscheme badwolf
 let mapleader=','
 let maplocalleader= ' '
 
-
 "tabular
 let g:tabular_loaded = 1
 
@@ -102,6 +102,7 @@ let g:gitgutter_highlight_lines = 0
 "========================= Start of runners =========================
 autocmd FileType ruby map <F9> :w<CR>:!clear && ruby -c %<CR>
 autocmd FileType ruby map <F8> :w<CR>:!clear && ruby -w  %<CR>
+autocmd FileType ruby map <F7> :w<CR>:!git diff  %<CR>
 autocmd FileType perl map <F8> :w<CR>:!clear && perl %<CR>
 autocmd FileType html map <F8> :w<CR>:!clear && chromium %<CR>
 autocmd FileType javascript map <F8> :w<CR>:!clear && node %<CR>
