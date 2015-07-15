@@ -153,7 +153,7 @@ au BufRead,BufNewFile *.go set filetype=go
 
 " Syntastic checkers
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
+let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_html_checkers=['w3']
 let g:syntastic_javascript_checkers=['jslint', 'jshint']
