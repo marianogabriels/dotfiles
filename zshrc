@@ -55,5 +55,10 @@ xset -b
 export NVM_DIR="/home/mschmidt/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+#ctrl + r like bash 
+bindkey -v
+bindkey '\e[3~' delete-char
+bindkey '^R' history-incremental-search-backward
+
 source ~/.aliases
 
