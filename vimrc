@@ -102,7 +102,7 @@ let g:gitgutter_highlight_lines = 0
 "========================= Start of runners =========================
 autocmd FileType ruby map <F9> :w<CR>:!clear && ruby -c %<CR>
 autocmd FileType ruby map <F8> :w<CR>:!clear && ruby -w  %<CR>
-autocmd FileType ruby map <F7> :w<CR>:!git diff  %<CR>
+autocmd FileType ruby map <F7> :SyntasticCheck rubocop <CR>
 autocmd FileType perl map <F8> :w<CR>:!clear && perl %<CR>
 autocmd FileType html map <F8> :w<CR>:!clear && chromium %<CR>
 autocmd FileType javascript map <F8> :w<CR>:!clear && node %<CR>
