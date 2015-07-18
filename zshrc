@@ -33,14 +33,15 @@ DISABLE_UNTRACKED_FILES_DIRTY=false
 
 # ::RVM:: 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/node_modules/phantomjs/lib/phantom/bin/
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # ::NVM::
-[ -s "/home/mschmidt/.nvm/nvm.sh" ] && . "/home/mschmidt/.nvm/nvm.sh" # This loads nvm
+[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # This loads nvm
 # ::GVM::
-[[ -s "/home/mschmidt/.gvm/scripts/gvm" ]] && source "/home/mschmidt/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 #clj
-export CLOJURESCRIPT_HOME=/home/mschmidt/projects/clojurescript
-export PATH=$PATH:/home/mschmidt/projects/clojurescript/bin
+export CLOJURESCRIPT_HOME=$HOME/projects/clojurescript
+export PATH=$PATH:$HOME/projects/clojurescript/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -51,11 +52,14 @@ ZSH_TMUX_AUTOSTART=true
 export DISABLE_AUTO_TITLE=true
 export TERM="xterm-256color"
 xset -b
-[[ -s "/home/mariano/.gvm/scripts/gvm" ]] && source "/home/mariano/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#ctrl + r like bash 
 bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
 
 source ~/.aliases
-
