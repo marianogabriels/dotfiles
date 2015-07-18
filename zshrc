@@ -51,4 +51,11 @@ ZSH_TMUX_AUTOSTART=true
 export DISABLE_AUTO_TITLE=true
 export TERM="xterm-256color"
 xset -b
+[[ -s "/home/mariano/.gvm/scripts/gvm" ]] && source "/home/mariano/.gvm/scripts/gvm"
+
+bindkey -v
+bindkey '\e[3~' delete-char
+bindkey '^R' history-incremental-search-backward
+
 source ~/.aliases
+
