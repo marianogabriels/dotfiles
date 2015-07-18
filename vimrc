@@ -67,6 +67,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
 
 "Themes colorschemes
 Plugin 'sjl/badwolf'
