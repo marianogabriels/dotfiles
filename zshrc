@@ -19,6 +19,8 @@ alias rgu="rvm gemset use"
 alias pw="sudo poweroff -i"
 alias tmux="tmux -L default"
 alias o="xclip -o"
+alias docker-compose-dev="docker-compose -f docker-compose.yml -f development.yml"
+alias docker-compose-test="docker-compose -f docker-compose.yml -f development.yml"
 
 
 
