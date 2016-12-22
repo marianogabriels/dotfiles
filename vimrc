@@ -153,6 +153,12 @@ au BufRead,BufNewFile *.less setfiletype css
 au BufRead,BufNewFile *.scala setfiletype scala
 au BufRead,BufNewFile *.go set filetype=go
 
+" go bindings
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
 " Syntastic checkers
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
