@@ -56,6 +56,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-rails'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
@@ -70,7 +71,6 @@ Plugin 'othree/html5.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
-Plugin 'mxw/vim-jsx'
 
 "Themes colorschemes
 Plugin 'sjl/badwolf'
@@ -155,14 +155,21 @@ au BufRead,BufNewFile *.less setfiletype css
 au BufRead,BufNewFile *.scala setfiletype scala
 au BufRead,BufNewFile *.go set filetype=go
 
+" go bindings
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
 " Syntastic checkers
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_html_checkers=['w3']
-let g:syntastic_javascript_checkers=['jslint', 'jshint']
+let g:syntastic_html_checkers=[]
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_always_populate_loc_list=1
 
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " Repl-tmux
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name":"default", "target_pane":"1"}
