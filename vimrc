@@ -78,6 +78,13 @@ Plugin 'tomasr/molokai'
 "Plugin 'zaiste/Atom'
 call vundle#end()
 
+
+" Hex read
+nmap <Leader>hr :%!xxd<CR> :set filetype=xxd<CR>
+"
+" " Hex write
+nmap <Leader>hw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
+
 colorscheme badwolf
 
 " LEADER
