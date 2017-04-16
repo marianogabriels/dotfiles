@@ -39,6 +39,8 @@ set ruler
 set showcmd
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+"set foldmethod=indent
+
 
 " Elegant tab switcher
 map <S-k> :tabn<CR>
@@ -49,7 +51,7 @@ map <S-h> :tabp<CR>
 
 call vundle#begin()
 Plugin 'gmarik/vundle'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-markdown'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdtree'
@@ -99,9 +101,9 @@ nnoremap <F1> za
 vnoremap <F1> zf
 
 "Ident guidelines
-let g:indentLine_char= '┆'
-let g:indentLine_enabled = 1
-let g:indentLine_filetype = []
+"let g:indentLine_char= '┆'
+"let g:indentLine_enabled = 1
+"let g:indentLine_filetype = []
 
 "Git gutter
 let g:gitgutter_eager = 0

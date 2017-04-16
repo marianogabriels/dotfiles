@@ -64,7 +64,7 @@ bindsym $mod+F1 exec chromium-browser
 bindsym $mod+m exec urxvt -e alsamixer
 # start a terminal
 #bindsym $mod+Return exec gnome-terminal --class gnome-terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec gnome-terminal
 #bindsym $mod+Return exec sakura
 #i3-sensible-terminal
 
