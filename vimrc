@@ -81,17 +81,18 @@ Plugin 'tomasr/molokai'
 call vundle#end()
 
 
-" Hex read
-nmap <Leader>hr :%!xxd<CR> :set filetype=xxd<CR>
-"
-" " Hex write
-nmap <Leader>hw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
-
 colorscheme badwolf
 
 " LEADER
 let mapleader=','
 let maplocalleader= ' '
+
+" Hex read
+nmap <Leader>br :%!xxd<CR> :set filetype=xxd<CR>
+"
+" " Hex write
+nmap <Leader>bw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
+
 
 "tabular
 let g:tabular_loaded = 1
