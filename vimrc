@@ -126,6 +126,7 @@ let javascript_enable_domhtmlcss=1
 autocmd FileType php setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType vim setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 "Autocomplete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
