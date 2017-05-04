@@ -55,6 +55,7 @@ nnoremap <C-l> <C-w>l
 
 
 call vundle#begin()
+
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-markdown'
 Plugin 'Shougo/vimproc.vim'
@@ -73,6 +74,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'posva/vim-vue'
 Plugin 'fatih/vim-go'
 
 Plugin 'sjl/badwolf'
