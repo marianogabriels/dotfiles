@@ -22,6 +22,7 @@ alias o="xclip -o"
 alias docker-compose-dev="docker-compose -f docker-compose.yml -f development.yml"
 alias docker-compose-test="docker-compose -f test.yml"
 alias dlogs="docker logs --tail=100 -f"
+alias nvim="nvim -u ~/.nvimrc"
 function dcontainer() {
     echo $(docker ps | grep $1 | awk '{print $1}')
 }
