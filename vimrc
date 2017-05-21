@@ -150,6 +150,10 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
+
+" ctrlp ignores
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " Syntastic checkers
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
