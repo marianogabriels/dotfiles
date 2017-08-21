@@ -65,7 +65,9 @@ Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-rails'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
+Plugin 'nsf/gocode', {'rtp': 'nvim/'}
+Plugin 'w0rp/ale'
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
@@ -74,8 +76,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'posva/vim-vue'
 Plugin 'fatih/vim-go'
+Plugin 'posva/vim-vue'
+"Plugin 'Blackrush/vim-gocode'
 
 Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
@@ -154,11 +157,10 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 " ctrlp ignores
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-" Syntastic checkers
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=0
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_html_checkers=[]
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_always_populate_loc_list=1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_lint_on_text_changed = 0
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 let g:jsx_ext_required = 0 
