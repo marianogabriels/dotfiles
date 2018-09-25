@@ -65,6 +65,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-rails'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tomlion/vim-solidity'
 "Plugin 'scrooloose/syntastic'
 Plugin 'nsf/gocode', {'rtp': 'nvim/'}
 Plugin 'w0rp/ale'
@@ -92,7 +93,7 @@ colorscheme badwolf
 let mapleader=','
 let maplocalleader= ' '
 map <Leader>s :call RunNearestSpec()<CR>
-let g:rspec_command = "!spring rspec {spec}"
+let g:rspec_command = "!rspec {spec}"
 
 
 " Hex read
