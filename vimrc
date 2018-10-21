@@ -78,6 +78,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
 Plugin 'posva/vim-vue'
+Plugin 'thoughtbot/vim-rspec'
 "Plugin 'Blackrush/vim-gocode'
 
 Plugin 'sjl/badwolf'
@@ -96,6 +97,12 @@ nmap <Leader>br :%!xxd<CR> :set filetype=xxd<CR>
 "
 " " Hex write
 nmap <Leader>bw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
+
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "!bin/rspec {spec}"
 
 
 "tabular
