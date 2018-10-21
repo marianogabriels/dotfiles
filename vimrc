@@ -65,16 +65,18 @@ Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-rails'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tomlion/vim-solidity'
 "Plugin 'scrooloose/syntastic'
 Plugin 'nsf/gocode', {'rtp': 'nvim/'}
 Plugin 'w0rp/ale'
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
+"Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
 Plugin 'posva/vim-vue'
@@ -91,6 +93,9 @@ colorscheme badwolf
 " LEADER
 let mapleader=','
 let maplocalleader= ' '
+map <Leader>s :call RunNearestSpec()<CR>
+let g:rspec_command = "!rspec {spec}"
+
 
 " Hex read
 nmap <Leader>br :%!xxd<CR> :set filetype=xxd<CR>
@@ -131,7 +136,7 @@ autocmd FileType ruby,haml,html,eruby,yaml,javascript,sass,cucumber set sw=2 sts
 autocmd FileType html,xhtml,xml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd BufRead,BufNewFile *.json setfiletype javascript
-autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 let javascript_enable_domhtmlcss=1
 autocmd FileType php setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType vim setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
