@@ -71,6 +71,7 @@ Plugin 'nsf/gocode', {'rtp': 'nvim/'}
 Plugin 'w0rp/ale'
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/tabular'
+Plugin 'tomlion/vim-solidity'
 Plugin 'tpope/vim-surround'
 "Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
