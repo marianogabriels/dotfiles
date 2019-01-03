@@ -40,12 +40,11 @@ DISABLE_UNTRACKED_FILES_DIRTY=false
 
 # ::RVM:: 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.yarn/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/node_modules/phantomjs/lib/phantom/bin/
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # ::NVM::
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # This loads nvm
-# ::GVM::
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 #clj
 export CLOJURESCRIPT_HOME=$HOME/projects/clojurescript
 export PATH=$PATH:$HOME/projects/clojurescript/bin
@@ -59,7 +58,6 @@ ZSH_TMUX_AUTOSTART=true
 export DISABLE_AUTO_TITLE=true
 export TERM="xterm-256color"
 xset -b
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -68,5 +66,5 @@ export NVM_DIR="$HOME/.nvm"
 bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.aliases

@@ -3,6 +3,7 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   install_vim_plug
+  install_fzf
   replace_all = true
   skiped_files = %w[Rakefile README.md cliboard LICENSE oh-my-zsh]
   files = Dir['*'] - skiped_files
@@ -37,6 +38,15 @@ end
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub(/\.erb$/, '')}"}
   link_file(file)
+end
+
+def install_fzf
+  unless File.directory?("#{ENV['HOME']}/.fzf/")
+
+    system %Q{git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+            ~/.fzf/install
+    }
+  end
 end
 
 def install_vim_plug
