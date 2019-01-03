@@ -52,6 +52,8 @@ nnoremap <C-l> <C-w>l
 
 
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-markdown'
 Plug 'Shougo/vimproc.vim'
@@ -64,7 +66,6 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'scrooloose/syntastic'
 Plug 'nsf/gocode', {'rtp': 'nvim/'}
 Plug 'w0rp/ale'
-Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-surround'
@@ -84,11 +85,15 @@ call plug#end()
 
 colorscheme badwolf
 
+
 " LEADER
 let mapleader=','
 let maplocalleader= ' '
 map <Leader>s :call RunNearestSpec()<CR>
 let g:rspec_command = "!rspec {spec}"
+
+" Fzf config
+nnoremap <c-p> :FZF<cr>
 
 
 " Hex read
@@ -160,9 +165,7 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
 
-" ctrlp ignores
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
+let g:FZF_DEFAULT_COMMAND = 'ag --ignore={build,.git,.project,*.o,*.d,hw_1_5/*} %s -l --hidden -g ""'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_lint_on_text_changed = 0
 let g:ale_echo_msg_warning_str = 'W'
