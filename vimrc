@@ -95,6 +95,10 @@ let g:rspec_command = "!rspec {spec}"
 " Fzf config
 nnoremap <c-p> :FZF<cr>
 
+let g:fzf_action = {
+            \ 'ctrl-s': 'split',
+            \ 'ctrl-v': 'vsplit'
+            \ }
 
 " Hex read
 nmap <Leader>br :%!xxd<CR> :set filetype=xxd<CR>
