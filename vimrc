@@ -94,11 +94,14 @@ let g:rspec_command = "!rspec {spec}"
 
 " Fzf config
 nnoremap <c-p> :FZF<cr>
+nnoremap <Leader> :Ag<cr>
 
 let g:fzf_action = {
             \ 'ctrl-s': 'split',
             \ 'ctrl-v': 'vsplit'
             \ }
+
+let g:FZF_DEFAULT_COMMAND = 'ag --ignore={build,*.log,.git,.project,*.o,*.d,hw_1_5/*} %s -l --hidden -g ""'
 
 " Hex read
 nmap <Leader>br :%!xxd<CR> :set filetype=xxd<CR>
@@ -169,7 +172,6 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
 
-let g:FZF_DEFAULT_COMMAND = 'ag --ignore={build,.git,.project,*.o,*.d,hw_1_5/*} %s -l --hidden -g ""'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_lint_on_text_changed = 0
 let g:ale_echo_msg_warning_str = 'W'
