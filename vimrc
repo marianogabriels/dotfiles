@@ -13,9 +13,6 @@ vnoremap <C-p> "+gP
 syntax on
 syntax enable
 
-set rtp+=~/.vim/bundle/Vundle.vim
-
-
 "Configuracion basica
 set clipboard=unnamedplus
 set ignorecase                  " set case insensitivity
@@ -54,37 +51,35 @@ nnoremap <C-l> <C-w>l
 
 
 
-call vundle#begin()
-
-Plugin 'gmarik/vundle'
-Plugin 'tpope/vim-markdown'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'mxw/vim-jsx'
-Plugin 'tpope/vim-rails'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'airblade/vim-gitgutter'
-"Plugin 'scrooloose/syntastic'
-Plugin 'nsf/gocode', {'rtp': 'nvim/'}
-Plugin 'w0rp/ale'
-Plugin 'kien/ctrlp.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'tomlion/vim-solidity'
-Plugin 'tpope/vim-surround'
-"Plugin 'vim-ruby/vim-ruby'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/html5.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/vim-go'
-Plugin 'posva/vim-vue'
-"Plugin 'Blackrush/vim-gocode'
-
-Plugin 'sjl/badwolf'
-Plugin 'tomasr/molokai'
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'gmarik/vundle'
+Plug 'tpope/vim-markdown'
+Plug 'Shougo/vimproc.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-rails'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'airblade/vim-gitgutter'
+"Plug 'scrooloose/syntastic'
+Plug 'nsf/gocode', {'rtp': 'nvim/'}
+Plug 'w0rp/ale'
+Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+Plug 'tomlion/vim-solidity'
+Plug 'tpope/vim-surround'
+"Plug 'vim-ruby/vim-ruby'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
+Plug 'mileszs/ack.vim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+Plug 'posva/vim-vue'
+"Plug 'Blackrush/vim-gocode'
+Plug 'sjl/badwolf'
+Plug 'tomasr/molokai'
+call plug#end()
 
 
 colorscheme badwolf
@@ -106,7 +101,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "!bin/rspec {spec}"
+let g:rspec_command = "!rspec {spec}"
 
 
 "tabular

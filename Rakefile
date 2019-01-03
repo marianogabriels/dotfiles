@@ -2,6 +2,7 @@ desc "install all dotfiles in home directory aggresive script"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
+  install_vim_plug
   replace_all = true
   skiped_files = %w[Rakefile README.md cliboard LICENSE oh-my-zsh]
   files = Dir['*'] - skiped_files
@@ -36,6 +37,12 @@ end
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub(/\.erb$/, '')}"}
   link_file(file)
+end
+
+def install_vim_plug
+  system %Q{curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  }
 end
 
 def link_file(file)
