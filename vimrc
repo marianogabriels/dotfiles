@@ -98,7 +98,8 @@ nnoremap <Leader> :Ag<cr>
 
 let g:fzf_action = {
             \ 'ctrl-s': 'split',
-            \ 'ctrl-v': 'vsplit'
+            \ 'ctrl-v': 'vsplit',
+            \ 'ctrl-t': 'tabnew'
             \ }
 
 let g:FZF_DEFAULT_COMMAND = 'ag --ignore={build,*.log,.git,.project,*.o,*.d,hw_1_5/*} %s -l --hidden -g ""'
