@@ -1,2 +1,2 @@
-gem: --no-rdoc
-update: --no-rdoc
+gem: --no-ri --no-rdoc
+update: --no-ri --no-rdoc
