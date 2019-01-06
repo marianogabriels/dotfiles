@@ -1,9 +1,0 @@
-name: sample2
-pre_window: rvm use 2.0.0@ecommerce
-root: ~/projects/ecommerce_app/
-windows:
-  - editor: vim
-  - tests: guard
-  - database: rails s
-  - logs: tails -f /logs/development.log
-  - console: rails c
