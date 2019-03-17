@@ -47,6 +47,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 for_window [title="urxvt"] border 1pixel
 for_window [title="sakura$"] border 1pixel
 for_window [title="gnome-terminal"] border 1pixel
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Control+Print exec gnome-screenshot -i
+
 
 
 
