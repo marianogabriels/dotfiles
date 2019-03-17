@@ -21,6 +21,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export GOPATH=$HOME/goprojects
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:~/.local/bin
 
 export TERM="xterm-256color"
 

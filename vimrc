@@ -49,8 +49,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
-
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -62,6 +60,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-rails'
 Plug 'elixir-editors/vim-elixir'
+Plug 'whiteinge/diffconflicts'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 "Plug 'scrooloose/syntastic'
