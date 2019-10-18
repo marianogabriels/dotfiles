@@ -78,12 +78,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'posva/vim-vue'
 "Plug 'Blackrush/vim-gocode'
-Plug 'sjl/badwolf'
 Plug 'tomasr/molokai'
 call plug#end()
 
-
-colorscheme badwolf
+let g:molokai_original = 1
+colorscheme molokai
 
 
 " LEADER
@@ -160,6 +159,7 @@ autocmd FileType perl setlocal complete-=i
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby let g:rubycomplete_buffer_loading=1
 autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+
 
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.thor set filetype=ruby
