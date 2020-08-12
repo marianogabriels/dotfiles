@@ -2,7 +2,6 @@
 set nocompatible " improved
 set encoding=utf-8
 
-
 filetype on
 filetype plugin on
 filetype indent on
@@ -49,40 +48,44 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'gmarik/vundle'
-Plug 'tpope/vim-markdown'
-Plug 'Shougo/vimproc.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'mxw/vim-jsx'
-Plug 'tpope/vim-rails'
-Plug 'elixir-editors/vim-elixir'
-Plug 'whiteinge/diffconflicts'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'airblade/vim-gitgutter'
-"Plug 'scrooloose/syntastic'
-Plug 'nsf/gocode', {'rtp': 'nvim/'}
-Plug 'w0rp/ale'
-Plug 'godlygeek/tabular'
-Plug 'tomlion/vim-solidity'
-Plug 'tpope/vim-surround'
-"Plug 'vim-ruby/vim-ruby'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/html5.vim'
-Plug 'mileszs/ack.vim'
-Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-fugitive'
-Plug 'fatih/vim-go'
-Plug 'posva/vim-vue'
-"Plug 'Blackrush/vim-gocode'
-Plug 'tomasr/molokai'
-call plug#end()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+Plugin 'gmarik/vundle'
 
-let g:molokai_original = 1
-colorscheme molokai
+Plugin 'Shougo/vimproc.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-rails'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'whiteinge/diffconflicts'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/syntastic'
+Plugin 'nsf/gocode', {'rtp': 'nvim/'}
+"Plug 'w0rp/ale'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tomlion/vim-solidity'
+Plugin 'tpope/vim-surround'
+"Plug 'vim-ruby/vim-ruby'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/html5.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+Plugin 'posva/vim-vue'
+"Plug 'Blackrush/vim-gocode'
+Plugin 'morhetz/gruvbox'
+call vundle#end()            " required
+
+set termguicolors
+set background=dark
+syntax enable
+colorscheme gruvbox
 
 
 " LEADER
@@ -172,11 +175,14 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_lint_on_text_changed = 0
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
 let g:jsx_ext_required = 0 
