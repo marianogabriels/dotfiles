@@ -42,6 +42,7 @@ map <S-j> :tabp<CR>
 map <S-l> :tabn<CR>
 map <S-h> :tabp<CR>
 
+
 "Easy split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -50,8 +51,7 @@ nnoremap <C-l> <C-w>l
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'gmarik/vundle'
 
 Plugin 'Shougo/vimproc.vim'
@@ -183,6 +183,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+nmap <leader>n :NERDTreeFind<CR>
+nmap <leader>m :NERDTreeToggle<CR>
 
 
 let g:jsx_ext_required = 0 
