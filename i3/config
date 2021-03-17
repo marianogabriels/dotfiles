@@ -4,6 +4,7 @@ exec xrdb ~/.Xresources
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id dropbox start
 
+
 #exec --no-startup-id gnome-session
 
 #for_window [title="Conky"] floating enable  border 3 pixel  floating_maximum_size 500 X 500 
@@ -47,8 +48,6 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 for_window [title="urxvt"] border 1pixel
 for_window [title="sakura$"] border 1pixel
 for_window [title="gnome-terminal"] border 1pixel
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym Control+Print exec gnome-screenshot -i
 
 
 
@@ -129,6 +128,8 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 bindsym $mod+c exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+
+bindsym Print exec gnome-screenshot -i 
 
 
 # focus the child container
