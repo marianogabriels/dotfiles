@@ -67,7 +67,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'nsf/gocode', {'rtp': 'nvim/'}
 "Plug 'w0rp/ale'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'tomlion/vim-solidity'
 Plugin 'tpope/vim-surround'
 "Plug 'vim-ruby/vim-ruby'
