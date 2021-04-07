@@ -167,6 +167,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufRead,BufNewFile *.less setfiletype css
 au BufRead,BufNewFile *.go set filetype=go
+au BufRead,BufNewFile *.sol set filetype=solidity
 
 " go bindings
 au FileType go nmap <leader>r <Plug>(go-run)
