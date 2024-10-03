@@ -5,10 +5,9 @@ export EDITOR='vim'
 alias pw="sudo poweroff -i"
 alias docker-logs="docker logs --tail=100 -f"
 
-plugins=(git rvm bundler nvm perl knife npm node vi-mode go vagrant)
+plugins=(git rvm bundler nvm perl knife npm node vi-mode vagrant)
 
 source $ZSH/oh-my-zsh.sh
-
 
 #git tracked prompt
 DISABLE_UNTRACKED_FILES_DIRTY=false
@@ -22,6 +21,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export GOPATH=$HOME/goprojects
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.local/bin
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 export TERM="xterm-256color"
 
