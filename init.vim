@@ -29,6 +29,7 @@ vnoremap <C-y> "+y                   " Copy to system clipboard in visual mode
 nnoremap <C-p> "+gP                  " Paste from system clipboard in normal mode
 vnoremap <C-p> "+gP                  " Paste from system clipboard in visual mode
 
+
 " Tab navigation
 nnoremap <S-l> :tabn<CR>             " Switch to next tab
 nnoremap <S-h> :tabp<CR>             " Switch to previous tab
@@ -55,23 +56,23 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'whiteinge/diffconflicts'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'tomlion/vim-solidity'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
+Plugin 'folke/tokyonight.nvim'
 Plugin 'mileszs/ack.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
 Plugin 'posva/vim-vue'
 Plugin 'tomasr/molokai'
+Plugin 'dense-analysis/ale'
 
 call vundle#end()                    " End plugin section
 
-" Colorscheme
-colorscheme molokai
+colorscheme tokyonight-night
 
 " Leader key setup
 let mapleader=','
@@ -127,16 +128,20 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
-" Syntastic settings
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " NERDTree mappings
 nmap <Leader>n :NERDTreeFind<CR>
 nmap <Leader>m :NERDTreeToggle<CR>
-
 " Folding mappings
 nnoremap <F1> za
 vnoremap <F1> zf
+
+" Ale config
+let g:ale_linters = {
+            \'elixir': ['credo']
+            \}
+let g:ale_virtualtext_cursor = 1
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_column_always = 0
+let g:ale_hover_to_floating_preview = 1
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'

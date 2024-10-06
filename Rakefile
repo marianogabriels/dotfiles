@@ -9,8 +9,9 @@ task :install do
   files = Dir['*'] - skiped_files
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
-
-    if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
+    if file == "init.vim"
+      link_nvim_init(file)
+    elsif File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}")
         puts "identical ~/.#{file.sub(/\.erb$/, '')}"
       elsif replace_all
@@ -61,9 +62,6 @@ def link_file(file)
     File.open(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"), 'w') do |new_file|
       new_file.write ERB.new(File.read(file)).result(binding)
     end
-  #elsif file =~ /zshrc$/ # copy zshrc instead of link
-  #  puts "copying ~/.#{file}"
-  #  system %Q{cp "$PWD/#{file}" "$HOME/.#{file}"}
   else
     puts "linking ~/.#{file}"
     if file =~ /subtitle/
@@ -95,6 +93,13 @@ def install_oh_my_zsh
       system %Q{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
     end
   end
+end
+
+def link_nvim_init(file)
+  nvim_config_dir = "#{ENV['HOME']}/.config/nvim"
+  system %Q{mkdir -p "#{nvim_config_dir}"}
+  system %Q{ln -sf "$PWD/#{file}" "#{nvim_config_dir}/init.vim"}
+  puts "linking #{file} to #{nvim_config_dir}/init.vim"
 end
 
 def optional(answer)
