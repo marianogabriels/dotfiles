@@ -6,7 +6,7 @@ task :install do
   install_fzf
 
   replace_all = true
-  skipped_files = %w[Rakefile README.md spec clipboard LICENSE oh-my-zsh]
+  skipped_files = %w[nvim Rakefile README.md spec clipboard LICENSE oh-my-zsh]
   dotfiles = Dir['*'] - skipped_files
 
   dotfiles.each do |file|
