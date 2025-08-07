@@ -1,11 +1,12 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="agnoster"
 
 export EDITOR='vim'
 
 alias pw="sudo poweroff -i"
 alias docker-logs="docker logs --tail=100 -f"
 alias vim="nvim"
+export ZSH_THEME="robbyrussell"
+
 export PATH="$HOME/.asdf/shims:$PATH"
 
 plugins=(
@@ -31,10 +32,12 @@ export PATH=$PATH:$GOPATH/bin
 
 export PATH=$PATH:~/.local/bin
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH="$HOME/.yarn/bin:$PATH"
 
 export TERM="xterm-256color"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.aliases
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export ERL_AFLAGS="-kernel shell_history enabled"
+export PATH="$PATH:$(npm config get prefix)/bin"
