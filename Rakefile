@@ -4,6 +4,7 @@ task :install do
   switch_to_zsh
   install_vim_plug
   install_fzf
+  link_nvim_config
 
   replace_all = true
   skipped_files = %w[nvim Rakefile README.md spec clipboard LICENSE oh-my-zsh]
@@ -17,9 +18,7 @@ end
 def process_dotfile(file, replace_all)
   ensure_directory_exists(file)
 
-  if file == "init.vim"
-    link_nvim_init(file)
-  elsif File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
+  if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
     handle_existing_file(file, replace_all)
   else
     link_file(file)
@@ -97,17 +96,16 @@ def create_symlink(file, target)
   system %Q{ln -s "$PWD/#{file}" "$HOME/#{target}"}
 end
 
-def link_nvim_init(file)
-  nvim_config_dir = "#{ENV['HOME']}/.config/nvim"
-  source_path = "#{Dir.pwd}/#{file}"
+def link_nvim_config
+  source_dir = File.join(Dir.pwd, 'nvim')
+  target_dir = File.join(ENV['HOME'], '.config', 'nvim')
 
-  target_path = "#{nvim_config_dir}/init.vim"
-  if File.symlink?(target_path) && File.readlink(target_path) == source_path
-    puts "identical #{target_path}"
+  if File.symlink?(target_dir) && File.readlink(target_dir) == source_dir
+    puts "identical #{target_dir}"
   else
-    system %Q{mkdir -p "#{nvim_config_dir}"}
-    system %Q{ln -sf "$PWD/#{file}" "#{target_path}"}
-    puts "linking #{file} to #{target_path}"
+    puts "linking #{source_dir} to #{target_dir}"
+    system %Q{mkdir -p "#{File.dirname(target_dir)}"}
+    system %Q{ln -sf "#{source_dir}" "#{target_dir}"}
   end
 end
 
